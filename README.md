@@ -1,2 +1,2 @@
-# jrpdango.github.io
+# WIP
 Personal website (under construction)
