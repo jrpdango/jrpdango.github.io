@@ -1,2 +1,2 @@
 # WIP
-Personal website (under construction)
+Personal website (under construction).
