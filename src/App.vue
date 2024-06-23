@@ -3,18 +3,28 @@ import { ref } from 'vue';
 import BaseHeader from './components/BaseHeader.vue';
 
 enum Theme {
-  DARK,
-  LIGHT
-}
+  DARK = "dark",
+  LIGHT = "light"
+};
 
 // Check preferred theme
 const theme = ref(window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ? Theme.DARK : Theme.LIGHT);
+document.documentElement.setAttribute('data-theme', theme.value);
 
+function toggleTheme() {
+  if(theme.value === Theme.DARK) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    theme.value = Theme.LIGHT;
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    theme.value = Theme.DARK;
+  }
+}
 
 </script>
 
 <template>
-  <BaseHeader />
+  <BaseHeader @theme-changed="() => { toggleTheme() }" />
 </template>
 
 <style scoped>
