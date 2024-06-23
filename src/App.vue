@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import BaseHeader from './components/BaseHeader.vue';
+import Projects from './components/Projects.vue';
 
 enum Theme {
   DARK = "dark",
@@ -25,6 +26,7 @@ function toggleTheme() {
 
 <template>
   <BaseHeader @theme-changed="() => { toggleTheme() }" />
+  <Projects />
 </template>
 
 <style scoped>
