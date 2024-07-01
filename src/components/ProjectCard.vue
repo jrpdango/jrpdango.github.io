@@ -33,7 +33,7 @@ defineProps<{
                 &nbsp;
                 <a :href="sourceCodeUrl" target="_blank">Source Code</a>
             </div>
-            <span v-if="sourceCodeUrl && demoUrl">| &nbsp;</span>
+            <span v-if="sourceCodeUrl && demoUrl" class="divider">| &nbsp;</span>
             <div v-if="demoUrl" class="project-url">
                 <img 
                     :src="githubIcon" 
@@ -64,5 +64,19 @@ defineProps<{
         display: flex;
         align-items: center;
         padding-right: 8px;
+    }
+
+    @media (max-width: 810px) {
+        .urls {
+            flex-direction: column;
+        }
+
+        .project-url {
+            align-self: start;
+        }
+
+        .divider {
+            display: none;
+        }
     }
 </style>

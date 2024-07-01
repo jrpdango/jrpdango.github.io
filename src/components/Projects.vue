@@ -32,7 +32,7 @@ import projects from '../data/projects.ts';
     }
 
     @media (max-width: 810px) {
-        .personal-projects {
+        .projects {
             grid-template-columns: repeat(2, 1fr);
         }
     }
