@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue';
 import projects from '../data/projects.ts';
+
+function projectsByType(type: string) {
+    return projects.filter((project) => project.type === type);
+}
+
 </script>
 
 <template>
     <h3>Personal Projects</h3>
     <div class="projects">
-        <div v-for="project in projects" class="project">
+        <div v-for="project in projectsByType('personal')" class="project">
             <ProjectCard 
                 :name="project.name" 
                 :description="project.description" 
@@ -18,7 +23,14 @@ import projects from '../data/projects.ts';
 
     <h3>Work Projects</h3>
     <div class="projects">
-        
+        <div v-for="project in projectsByType('work')" class="project">
+            <ProjectCard 
+                :name="project.name" 
+                :description="project.description" 
+                :source-code-url="project.sourceCodeUrl"
+                :demo-url="project.demoUrl"
+            />
+        </div>
     </div>
 </template>
 

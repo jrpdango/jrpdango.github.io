@@ -7,14 +7,10 @@ const projects = [
         type: "personal"
     },
     {
-        name: "Project Two",
-        description: "Project description blah blah blah blah blah blah blah blah blah",
-        type: "work"
-    },
-    {
-        name: "Project Three",
-        description: "Project description blah blah blah blah blah blah blah blah blah",
-        type: "work"
+        name: "JP Counter",
+        description: "A simple CLI tracker I use to count correct/wrong answers when studying vocabulary. Keeps data in an SQLite database and automatically syncs to its GitHub repository.",
+        sourceCodeUrl: "https://jrpdango.github.io/gittop/display?repo=jp-counter&owner=jrpdango&token=wosvwqbCi0FoWXBvU2TCjCTDh8KmBsOZwr3DuMKcPm7DjgrClBJ9w4cow793TCwBwqsQcnoVB8OaJcKAwpdWey_CrBozQVPCvMKEw6nDqGhmwqVbwr3Cmg42w4BTAcKxw4_CuMKCAcK4cDrDiMKcN3LDsyJ7w4nCmSHDl8K1fAbCtErDuMKVw6ltw5rDusKCfQ_Dg8O0EMOxwrgJw6DDkGbDpcKUwp4CwqDDvWUUwpbCgcKXZw",
+        type: "personal"
     }
 ];
 
