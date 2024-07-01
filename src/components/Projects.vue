@@ -7,7 +7,12 @@ import projects from '../data/projects.ts';
     <h3>Personal Projects</h3>
     <div class="projects">
         <div v-for="project in projects" class="project">
-            <ProjectCard :name="project.name" :description="project.description" />
+            <ProjectCard 
+                :name="project.name" 
+                :description="project.description" 
+                :source-code-url="project.sourceCodeUrl"
+                :demo-url="project.demoUrl"
+            />
         </div>
     </div>
 
