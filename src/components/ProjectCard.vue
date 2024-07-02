@@ -14,7 +14,7 @@ defineProps<{
     myRole?: string,
     difficulties?: string,
     solution?: string,
-    techUsed?: Tech[]
+    techsUsed?: Tech[]
 }>();
 </script>
 
@@ -53,7 +53,7 @@ defineProps<{
         <p>{{ description }}</p>
         <div class="tech-used">
             <h5>Tech/Languages I Used</h5>
-            <div v-for="tech in techUsed" class="tech">
+            <div v-for="tech in techsUsed" class="tech">
                 <img height="24" width="24" :src="`https://cdn.simpleicons.org/${tech.slug}`" />
                 <p>{{ tech.name }}</p>
             </div>

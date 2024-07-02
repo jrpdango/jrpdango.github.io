@@ -1,3 +1,5 @@
+// Slugs found here: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
+
 const techs = {
     nodedotjs: {
         name: "Node.js",
@@ -47,6 +49,38 @@ const techs = {
         name: "Kotlin",
         slug: "kotlin"
     },
+    flutter: {
+        name: "Flutter",
+        slug: "flutter"
+    },
+    react: {
+        name: "React",
+        slug: "react"
+    },
+    rust: {
+        name: "Rust",
+        slug: "rust"
+    },
+    sqlite: {
+        name: "SQLite",
+        slug: "sqlite"
+    },
+    myanimelist: {
+        name: "MyAnimeList",
+        slug: "myanimelist"
+    },
+    html5: {
+        name: "HTML",
+        slug: "html5"
+    },
+    css3: {
+        name: "CSS",
+        slug: "css3"
+    },
+    dart: {
+        name: "Dart",
+        slug: "dart"
+    }
 };
 
 export default techs;
