@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import githubIcon from '/github-color.svg';
 
+type Tech = {
+    name: string;
+    slug: string;
+};
+
 defineProps<{
     name: string,
     description: string,
@@ -9,7 +14,7 @@ defineProps<{
     myRole?: string,
     difficulties?: string,
     solution?: string,
-    techUsed?: string[]
+    techUsed?: Tech[]
 }>();
 </script>
 
@@ -48,7 +53,8 @@ defineProps<{
         <p>{{ description }}</p>
         <div class="tech-used">
             <div v-for="tech in techUsed" class="tech">
-                <p>{{ tech }}</p>
+                <img height="24" width="24" :src="`https://cdn.simpleicons.org/${tech.slug}`" />
+                <p>{{ tech.name }}</p>
             </div>
         </div>
     </div>
@@ -69,6 +75,19 @@ defineProps<{
         display: flex;
         align-items: center;
         padding-right: 8px;
+    }
+
+    .tech {
+        display: flex;
+        align-items: center;
+    }
+
+    .tech img {
+        margin-right: 8px;
+    }
+
+    .tech p {
+        margin: 4px;
     }
 
     @media (max-width: 810px) {

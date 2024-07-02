@@ -1,3 +1,5 @@
+import techs from "./techs";
+
 const projects = [
     {
         name: "Gittop",
@@ -23,18 +25,18 @@ const projects = [
         description: "Real estate unit and user management system available on desktop, Android, and iOS.",
         myRole: "Work with multiple scrum teams on different platforms: desktop front-end + back-end, Android client.",
         techUsed: [
-            "nodedotjs",
-            "mysql",
-            "mongodb",
-            "express",
-            "vuedotjs",
-            "tailwindcss",
-            "graphql",
-            "gnubash",
-            "rockylinux",
-            "jetpackcompose",
-            "javascript",
-            "kotlin"
+            techs.nodedotjs,
+            techs.mysql,
+            techs.mongodb,
+            techs.express,
+            techs.vuedotjs,
+            techs.tailwindcss,
+            techs.graphql,
+            techs.gnubash,
+            techs.rockylinux,
+            techs.jetpackcompose,
+            techs.javascript,
+            techs.kotlin
         ],
         type: "work"
     },
