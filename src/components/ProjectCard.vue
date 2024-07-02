@@ -52,6 +52,7 @@ defineProps<{
         </div>
         <p>{{ description }}</p>
         <div class="tech-used">
+            <h5>Tech/Languages I Used</h5>
             <div v-for="tech in techUsed" class="tech">
                 <img height="24" width="24" :src="`https://cdn.simpleicons.org/${tech.slug}`" />
                 <p>{{ tech.name }}</p>
@@ -75,6 +76,10 @@ defineProps<{
         display: flex;
         align-items: center;
         padding-right: 8px;
+    }
+
+    .tech-used h5 {
+        margin-bottom: 8px;
     }
 
     .tech {
