@@ -29,6 +29,7 @@ function projectsByType(type: string) {
                 :description="project.description" 
                 :source-code-url="project.sourceCodeUrl"
                 :demo-url="project.demoUrl"
+                :tech-used="project.techUsed"
             />
         </div>
     </div>

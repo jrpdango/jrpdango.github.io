@@ -9,7 +9,7 @@ defineProps<{
     myRole?: string,
     difficulties?: string,
     solution?: string,
-    techUsed?: string
+    techUsed?: string[]
 }>();
 </script>
 
@@ -46,6 +46,11 @@ defineProps<{
             </div>
         </div>
         <p>{{ description }}</p>
+        <div class="tech-used">
+            <div v-for="tech in techUsed" class="tech">
+                <p>{{ tech }}</p>
+            </div>
+        </div>
     </div>
 </template>
 
