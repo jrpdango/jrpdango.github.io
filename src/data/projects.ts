@@ -19,6 +19,26 @@ const projects = [
         type: "personal"
     },
     {
+        name: "Unit Monitoring System",
+        description: "Real estate unit and user management system available on desktop, Android, and iOS.",
+        myRole: "Work with multiple scrum teams on different platforms: desktop front-end + back-end, Android client.",
+        techUsed: [
+            "Node.js",
+            "MySQL",
+            "MongoDB",
+            "Express.js",
+            "Vue.js",
+            "Tailwind CSS",
+            "GraphQL",
+            "Bash",
+            "Rocky Linux",
+            "Jetpack Compose",
+            "JavaScript",
+            "Kotlin"
+        ],
+        type: "work"
+    },
+    {
         name: "Doc Ayn",
         description: "Placeholder text",
         sourceCodeUrl: "",
