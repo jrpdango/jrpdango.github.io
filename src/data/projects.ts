@@ -41,7 +41,23 @@ const projects = [
     {
         name: "Unit Monitoring System",
         description: "Real estate unit and user management system available on desktop, Android, and iOS.",
-        myRole: "Work with multiple scrum teams on different platforms: desktop front-end + back-end, Android client.",
+        myRole: `
+            Worked with multiple scrum teams on different platforms: desktop front-end + back-end, Android client.
+            <h6>Desktop Front-End</h6>
+            <ul>
+                <li>Created </li>
+            </ul>
+            <h6>Desktop Back-End</h6>
+            <ul>
+                <li>Set up development EC2 instances to temporarily host front-end and REST API.</li>
+                <li>Created Bash scripts for more streamlined deployment.</li>
+                <li></li>
+            </ul>
+            <h6>Android</h6>
+            <ul>
+                <li>Item</li>
+            </ul>
+        `,
         techsUsed: [
             techs.nodedotjs,
             techs.mysql,
@@ -51,6 +67,7 @@ const projects = [
             techs.tailwindcss,
             techs.graphql,
             techs.gnubash,
+            techs.amazonec2,
             techs.rockylinux,
             techs.jetpackcompose,
             techs.javascript,
@@ -65,7 +82,7 @@ const projects = [
         description: "Tracker for monthly cycles, prescriptions, and doctor appointment scheduling.",
         myRole: `
             <ul>
-            <li>Collaborated with a small team to port existing native Android app in iOS.</li>
+            <li>Collaborated with a small team to port existing native Android app to iOS.</li>
             <li>Integrated app login with Google Sign-In.</li> 
             <li>Connected Firebase Firestore database.</li>
             </ul>

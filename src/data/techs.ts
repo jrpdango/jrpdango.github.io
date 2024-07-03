@@ -96,6 +96,10 @@ const techs = {
     googleMLKit: {
         name: "Google ML Kit",
         slug: "Android"
+    },
+    amazonec2: {
+        name: "Amazon EC2",
+        slug: "amazonec2"
     }
 };
 
