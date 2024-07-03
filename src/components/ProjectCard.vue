@@ -58,7 +58,7 @@ defineProps<{
                 <p>{{ tech.name }}</p>
             </div>
         </div>
-        <h5 class="section-title">My Roles</h5>
+        <h5 v-if="myRole" class="section-title">My Roles</h5>
         <div v-html="myRole"></div>
     </div>
 </template>
