@@ -40,14 +40,20 @@ function projectsByType(type: string) {
     .projects {
         margin: 32px 16px 32px 16px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         column-gap: 32px;
         justify-items: center;
     }
 
-    @media (max-width: 810px) {
+    @media (min-width: 768px) {
         .projects {
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1300px) {
+        .projects {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 </style>
