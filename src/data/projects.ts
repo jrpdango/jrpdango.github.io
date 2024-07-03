@@ -23,7 +23,8 @@ const projects = [
         techsUsed: [
             techs.rust,
             techs.gnubash,
-            techs.sqlite
+            techs.sqlite,
+            techs.ubuntu
         ]
     },
     {
@@ -61,8 +62,12 @@ const projects = [
     },
     {
         name: "Doc Ayn",
-        description: "Placeholder text",
-        sourceCodeUrl: "",
+        description: "Women's health tracker for monthly cycles, prescriptions, and doctor appointments.",
+        myRole: "Collaborate in a small team to port existing native Android app to iOS.",
+        techsUsed: [
+            techs.swift,
+            techs.firebase
+        ],
         type: "work"
     },
 ];

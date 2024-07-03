@@ -80,7 +80,19 @@ const techs = {
     dart: {
         name: "Dart",
         slug: "dart"
-    }
+    },
+    ubuntu: {
+        name: "Ubuntu",
+        slug: "ubuntu"
+    },
+    swift: {
+        name: "Swift",
+        slug: "swift"
+    },
+    firebase: {
+        name: "Firebase",
+        slug: "firebase"
+    },
 };
 
 export default techs;
