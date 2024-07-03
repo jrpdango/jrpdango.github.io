@@ -61,12 +61,27 @@ const projects = [
         type: "work"
     },
     {
-        name: "Doc Ayn",
-        description: "Women's health tracker for monthly cycles, prescriptions, and doctor appointments.",
+        name: "Women's Health Tracker / Doctor Appointment App",
+        description: "Tracker for monthly cycles, prescriptions, and doctor appointment scheduling.",
         myRole: "Collaborate in a small team to port existing native Android app to iOS.",
         techsUsed: [
             techs.swift,
             techs.firebase
+        ],
+        type: "work"
+    },
+    {
+        name: "Fish Information Database Client",
+        description: "Android app to display a global database of varied fish species information.",
+        myRole: `
+            <ul style="margin-top: 0;">
+            <li> Added machine translation to elements specified by project client.</li>
+            <li>Updated/fixed various UI concerns.</li>
+            </ul>
+        `,
+        techsUsed: [
+            techs.kotlin,
+            techs.googleMLKit
         ],
         type: "work"
     },

@@ -93,6 +93,10 @@ const techs = {
         name: "Firebase",
         slug: "firebase"
     },
+    googleMLKit: {
+        name: "Google ML Kit",
+        slug: "Android"
+    }
 };
 
 export default techs;

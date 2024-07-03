@@ -52,12 +52,14 @@ defineProps<{
         </div>
         <p>{{ description }}</p>
         <div class="tech-used">
-            <h5>Tech/Languages I Used</h5>
+            <h5 class="section-title">Tech/Languages I Used</h5>
             <div v-for="tech in techsUsed" class="tech">
                 <img height="24" width="24" :src="`https://cdn.simpleicons.org/${tech.slug}`" />
                 <p>{{ tech.name }}</p>
             </div>
         </div>
+        <h5 class="section-title">My Roles</h5>
+        <div v-html="myRole"></div>
     </div>
 </template>
 
@@ -78,7 +80,7 @@ defineProps<{
         padding-right: 8px;
     }
 
-    .tech-used h5 {
+    .section-title {
         margin-bottom: 8px;
     }
 

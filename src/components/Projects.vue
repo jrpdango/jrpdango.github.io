@@ -17,6 +17,7 @@ function projectsByType(type: string) {
                 :description="project.description" 
                 :source-code-url="project.sourceCodeUrl"
                 :demo-url="project.demoUrl"
+                :my-role="project.myRole"
                 :techs-used="project.techsUsed"
             />
         </div>
@@ -30,6 +31,7 @@ function projectsByType(type: string) {
                 :description="project.description" 
                 :source-code-url="project.sourceCodeUrl"
                 :demo-url="project.demoUrl"
+                :my-role="project.myRole"
                 :techs-used="project.techsUsed"
             />
         </div>
