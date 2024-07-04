@@ -51,8 +51,6 @@ defineProps<{
             </div>
         </div>
         <p>{{ description }}</p>
-        <h5 v-if="myRole" class="section-title">My Roles</h5>
-        <div v-html="myRole"></div>
         <div class="tech-used">
             <h5 class="section-title">Tech/Languages I Used</h5>
             <div v-for="tech in techsUsed" class="tech">
@@ -67,6 +65,9 @@ defineProps<{
     .project-card {
         display: flex;
         flex-direction: column;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        padding: 16px;
     }
 
     .urls {

@@ -32,6 +32,12 @@ function projectsByType(type: string) {
         justify-items: center;
     }
 
+    .project {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+    }
+
     @media (min-width: 768px) {
         .projects {
             grid-template-columns: repeat(2, 1fr);
