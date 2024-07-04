@@ -9,6 +9,7 @@ type Tech = {
 defineProps<{
     name: string,
     description: string,
+    thumbnail?: string,
     sourceCodeUrl?: string,
     demoUrl?: string,
     myRole?: string,
@@ -21,10 +22,11 @@ defineProps<{
 <template>
     <div class="project-card">
         <img 
-            src="https://cdn.myanimelist.net/images/characters/6/29652.jpg" 
+            class="project-thumbnail"
+            :src="thumbnail ?? 'https://cdn.myanimelist.net/images/characters/6/29652.jpg'" 
             alt="Temp Image" 
             height="200"
-            width="130"
+            width="566"
         />
         <h4>{{ name }}</h4>
         <div class="urls">
@@ -68,6 +70,11 @@ defineProps<{
         border: 2px solid var(--border-color);
         border-radius: 8px;
         padding: 16px;
+    }
+
+    .project-thumbnail {
+        object-fit: cover;
+        object-position: top;
     }
 
     .urls {

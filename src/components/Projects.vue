@@ -14,7 +14,8 @@ function projectsByType(type: string) {
         <div v-for="project in projectsByType('personal')" class="project">
             <ProjectCard 
                 :name="project.name" 
-                :description="project.description" 
+                :description="project.description"
+                :thumbnail="project.thumbnail" 
                 :source-code-url="project.sourceCodeUrl"
                 :demo-url="project.demoUrl"
                 :techs-used="project.techsUsed"
