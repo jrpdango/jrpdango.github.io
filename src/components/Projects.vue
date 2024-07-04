@@ -17,21 +17,6 @@ function projectsByType(type: string) {
                 :description="project.description" 
                 :source-code-url="project.sourceCodeUrl"
                 :demo-url="project.demoUrl"
-                :my-role="project.myRole"
-                :techs-used="project.techsUsed"
-            />
-        </div>
-    </div>
-
-    <h3>Work Projects</h3>
-    <div class="projects">
-        <div v-for="project in projectsByType('work')" class="project">
-            <ProjectCard 
-                :name="project.name" 
-                :description="project.description" 
-                :source-code-url="project.sourceCodeUrl"
-                :demo-url="project.demoUrl"
-                :my-role="project.myRole"
                 :techs-used="project.techsUsed"
             />
         </div>
