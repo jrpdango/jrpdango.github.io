@@ -5,6 +5,8 @@ enum Theme {
     LIGHT = "light"
   };
 
-export const theme = reactive({
+const theme = reactive({
     state: Theme.DARK
 });
+
+export { Theme, theme };
