@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import BaseHeader from './components/BaseHeader.vue';
 import Projects from './components/Projects.vue';
+import { theme } from './theme';
 
 enum Theme {
   DARK = "dark",
@@ -9,16 +9,16 @@ enum Theme {
 };
 
 // Check preferred theme
-const theme = ref(window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ? Theme.DARK : Theme.LIGHT);
-document.documentElement.setAttribute('data-theme', theme.value);
+theme.state = window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ? Theme.DARK : Theme.LIGHT;
+document.documentElement.setAttribute('data-theme', theme.state);
 
 function toggleTheme() {
-  if(theme.value === Theme.DARK) {
+  if(theme.state === Theme.DARK) {
     document.documentElement.setAttribute('data-theme', 'light');
-    theme.value = Theme.LIGHT;
+    theme.state = Theme.LIGHT;
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
-    theme.value = Theme.DARK;
+    theme.state = Theme.DARK;
   }
 }
 

@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import githubIcon from '/github-color.svg';
+import { computed } from 'vue';
+import { theme } from '../theme';
 
 type Tech = {
     name: string;
     slug: string;
 };
 
-defineProps<{
+const props = defineProps<{
     name: string,
     description: string,
     thumbnail?: string,
+    thumbnailDark?: string,
     sourceCodeUrl?: string,
     demoUrl?: string,
     myRole?: string,
@@ -17,13 +20,22 @@ defineProps<{
     solution?: string,
     techsUsed?: Tech[]
 }>();
+
+const cardThumbnail = computed(() => {
+    if(theme.state === 'dark' && props.thumbnailDark) {
+        return props.thumbnailDark;
+    } else {
+        return props.thumbnail;
+    }
+});
+
 </script>
 
 <template>
     <div class="project-card">
         <img 
             class="project-thumbnail"
-            :src="thumbnail ?? 'https://cdn.myanimelist.net/images/characters/6/29652.jpg'" 
+            :src="cardThumbnail ?? 'https://cdn.myanimelist.net/images/characters/6/29652.jpg'" 
             alt="Temp Image" 
             height="200"
             width="566"
@@ -74,7 +86,6 @@ defineProps<{
 
     .project-thumbnail {
         object-fit: cover;
-        object-position: top;
     }
 
     .urls {
