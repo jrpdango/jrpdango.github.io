@@ -33,6 +33,7 @@ const projects = [
     {
         name: "miru",
         description: "A mobile MyAnimeList client demo I made to easily access a list of shows I've watched or plan to watch.",
+        thumbnail: "/miru.png",
         sourceCodeUrl: "https://jrpdango.github.io/gittop/display?repo=miru&owner=jrpdango&token=ccKPw54wAMKbw7tYASfCqHjDjMKracK7wrnDnQfDtmHCjyIpwpMhbsKoEg5EwrkKYMK7wpDCjMO5wrnDrsO3U8Ktw5A0GjPDjCI8dsKgIsOkKDckInfDq8Kqw7TCgC8Fw5TDgsKxKcOUw4NCV8KTwoTCgyUmCcOUwrXCm8OfworCt2YTw5XCosOvwqBiwo3CqMOKamcgC8KxwoEqMGY8NMO3w4FyAQLCujo1w7nCvsKac2gZEQ",
         type: "personal",
         techsUsed: [

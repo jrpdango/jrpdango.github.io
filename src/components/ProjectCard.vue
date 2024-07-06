@@ -38,7 +38,6 @@ const cardThumbnail = computed(() => {
             :src="cardThumbnail ?? 'https://cdn.myanimelist.net/images/characters/6/29652.jpg'" 
             alt="Temp Image" 
             height="200"
-            width="566"
         />
         <h4>{{ name }}</h4>
         <div class="urls">
@@ -85,7 +84,9 @@ const cardThumbnail = computed(() => {
     }
 
     .project-thumbnail {
-        object-fit: cover;
+        object-fit: contain;
+        max-width: 566px;
+        width: 100%;
     }
 
     .urls {
