@@ -1,14 +1,31 @@
 <script setup lang="ts">
 import githubIcon from '/github-color.svg';
 import linkedinIcon from '/linkedin-color.svg';
-defineEmits(['themeChanged']);
+import ThemeSwitcher from './ThemeSwitcher.vue';
+import { theme } from '../theme';
+
+enum Theme {
+  DARK = "dark",
+  LIGHT = "light"
+};
+
+function toggleTheme() {
+  if(theme.state === Theme.DARK) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    theme.state = Theme.LIGHT;
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    theme.state = Theme.DARK;
+  }
+}
 </script>
 
 <template>
     <div class="header" ref="header">
         <div class="top-row">
             <h2 class="my-name">Jasper Robert Pigason</h2>
-            <button class="theme-switcher" @click="$emit('themeChanged')">Change theme</button>
+            <!-- <button class="theme-switcher" >Change theme</button> -->
+            <ThemeSwitcher  @theme-changed="toggleTheme"/>
         </div>
         
         <div class="social-links">
