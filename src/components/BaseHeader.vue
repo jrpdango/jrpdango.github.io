@@ -5,9 +5,9 @@ defineEmits(['themeChanged']);
 </script>
 
 <template>
-    <div>
+    <div class="header" ref="header">
         <div class="top-row">
-            <h2>Jasper Robert Pigason</h2>
+            <h2 class="my-name">Jasper Robert Pigason</h2>
             <button class="theme-switcher" @click="$emit('themeChanged')">Change theme</button>
         </div>
         
@@ -19,6 +19,14 @@ defineEmits(['themeChanged']);
 </template>
 
 <style scoped>
+    .header {
+        margin-left: 16px;
+    }
+
+    .my-name {
+        margin-top: 24px;
+    }
+
     .top-row {
         display: flex;
         justify-content: space-between;
