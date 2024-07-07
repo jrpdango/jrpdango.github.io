@@ -19,7 +19,7 @@ function toggleTheme() {
     <div class="header" ref="header">
         <ThemeSwitcher  @theme-changed="toggleTheme"/>
         <div class="top-row">
-            <h2 class="my-name">Jasper Robert Pigason</h2>
+            <h1 class="my-name">Jasper Robert Pigason</h1>
         </div>
         <div class="social-links">
             <img :src="linkedinIcon" />
@@ -35,6 +35,14 @@ function toggleTheme() {
 
     .my-name {
         margin-top: 40px;
+        margin-bottom: 0;
+        font-size: 1.75rem;
+    }
+
+    @media (min-width: 404px) {
+        .my-name {
+            font-size: 2rem;
+        }
     }
 
     .top-row {
