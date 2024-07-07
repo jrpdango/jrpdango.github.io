@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import linkedinIcon from '/linkedin-color.svg';
+import githubIcon from '/github-color.svg';
 import ThemeSwitcher from './ThemeSwitcher.vue';
 </script>
 
@@ -11,6 +12,7 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
         </div>
         <div class="social-links">
             <img :src="linkedinIcon" />
+            <img :src="githubIcon" />
         </div>
     </div>
 </template>
