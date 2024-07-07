@@ -2,12 +2,7 @@
 import githubIcon from '/github-color.svg';
 import linkedinIcon from '/linkedin-color.svg';
 import ThemeSwitcher from './ThemeSwitcher.vue';
-import { theme } from '../theme';
-
-enum Theme {
-  DARK = "dark",
-  LIGHT = "light"
-};
+import { Theme, theme } from '../theme';
 
 function toggleTheme() {
   if(theme.state === Theme.DARK) {
@@ -24,7 +19,6 @@ function toggleTheme() {
     <div class="header" ref="header">
         <div class="top-row">
             <h2 class="my-name">Jasper Robert Pigason</h2>
-            <!-- <button class="theme-switcher" >Change theme</button> -->
             <ThemeSwitcher  @theme-changed="toggleTheme"/>
         </div>
         
