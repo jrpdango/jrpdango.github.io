@@ -3,11 +3,7 @@ import githubIcon from '/github-color.svg';
 import { computed } from 'vue';
 import { theme } from '../theme';
 import ThemedImage from './ThemedImage.vue';
-
-type Tech = {
-    name: string;
-    slug: string;
-};
+import { Tech } from '../types';
 
 const props = defineProps<{
     name: string,
