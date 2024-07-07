@@ -34,6 +34,7 @@ function toggleTheme() {
         height: 34px;
         position: fixed;
         right: 10px;
+        top: 8px;
         width: 60px;
     } 
 

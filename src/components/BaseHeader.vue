@@ -9,6 +9,7 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
         <ThemeSwitcher />
         <div class="top-row">
             <h1 class="my-name">Jasper Robert Pigason</h1>
+            <p class="my-description">I like messing around with different technologies to see what I can make from them.</p>
         </div>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/jasper-pigason-566148177/" target="_blank">
@@ -32,6 +33,11 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
         font-size: 1.75rem;
     }
 
+    .my-description {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
     @media (min-width: 404px) {
         .my-name {
             font-size: 2rem;
@@ -39,8 +45,7 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
     }
 
     .top-row {
-        display: flex;
-        justify-content: space-between;
+        display: block;
     }
 
     .theme-switcher {
