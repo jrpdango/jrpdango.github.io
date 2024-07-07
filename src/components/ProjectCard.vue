@@ -54,7 +54,7 @@ defineProps<{
                 <a :href="demoUrl" target="_blank">Live Demo</a>
             </div>
         </div>
-        <p>{{ description }}</p>
+        <p class="project-description">{{ description }}</p>
         <div class="tech-used">
             <h4 class="section-title">Tech/Languages I Used</h4>
             <div v-for="tech in techsUsed" class="tech">
@@ -78,10 +78,15 @@ defineProps<{
         object-fit: contain;
         max-width: 566px;
         width: 100%;
+        align-self: center;
     }
 
     .project-name {
         margin-bottom: 8px;
+    }
+
+    .project-description {
+        min-height: 72px;
     }
 
     .urls {

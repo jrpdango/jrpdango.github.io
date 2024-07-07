@@ -9,7 +9,7 @@ function projectsByType(type: string) {
 </script>
 
 <template>
-    <h3 class="projects-title">Personal Projects</h3>
+    <h2 class="projects-title">Personal Projects</h2>
     <div class="projects">
         <div v-for="project in projectsByType('personal')" class="project">
             <ProjectCard 
