@@ -3,16 +3,25 @@ import { computed } from 'vue';
 import moon from '/crescent-moon.svg';
 import sun from '/sun.svg';
 import { Theme, theme } from '../theme';
-defineEmits(['themeChanged']);
 
 const indicator = computed(() => {
     return theme.state === Theme.DARK ? moon : sun;
 });
+
+function toggleTheme() {
+  if(theme.state === Theme.DARK) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    theme.state = Theme.LIGHT;
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    theme.state = Theme.DARK;
+  }
+}
 </script>
 
 <template>
     <label class="theme-switch" for="switch">
-        <input type="checkbox" id="switch" @click="$emit('themeChanged')" :checked="theme.state === Theme.DARK" />
+        <input type="checkbox" id="switch" @click="toggleTheme" :checked="theme.state === Theme.DARK" />
         <div class="slider">
             <img :src="indicator" class="indicator" alt="moon" />
         </div>
