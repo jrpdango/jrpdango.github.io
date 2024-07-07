@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import githubIcon from '/github-color.svg';
 import ThemedImage from './ThemedImage.vue';
 import { ThemedImageSource, Tech } from '../types';
 
@@ -25,7 +24,7 @@ defineProps<{
             alt="Source code URL"
             :height="200"
         />
-        <h4>{{ name }}</h4>
+        <h2 class="project-name">{{ name }}</h2>
         <div class="urls">
             <div v-if="sourceCodeUrl" class="project-url">
                 <ThemedImage 
@@ -42,11 +41,14 @@ defineProps<{
             </div>
             <span v-if="sourceCodeUrl && demoUrl" class="divider">| &nbsp;</span>
             <div v-if="demoUrl" class="project-url">
-                <img 
-                    :src="githubIcon" 
-                    height="30"
-                    width="30"
-                    alt="Project URL" 
+                <ThemedImage 
+                    :src="{
+                        forDark: '/demo-dark.svg',
+                        forLight: '/demo-light.svg'
+                    }" 
+                    alt="Project URL"
+                    :height="30"
+                    :width="30"
                 />
                 &nbsp;
                 <a :href="demoUrl" target="_blank">Live Demo</a>
@@ -54,7 +56,7 @@ defineProps<{
         </div>
         <p>{{ description }}</p>
         <div class="tech-used">
-            <h5 class="section-title">Tech/Languages I Used</h5>
+            <h4 class="section-title">Tech/Languages I Used</h4>
             <div v-for="tech in techsUsed" class="tech">
                 <img height="24" width="24" :src="`https://cdn.simpleicons.org/${tech.slug}`" />
                 <p>{{ tech.name }}</p>
@@ -76,6 +78,10 @@ defineProps<{
         object-fit: contain;
         max-width: 566px;
         width: 100%;
+    }
+
+    .project-name {
+        margin-bottom: 8px;
     }
 
     .urls {
