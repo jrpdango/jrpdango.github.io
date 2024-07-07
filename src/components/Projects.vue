@@ -9,7 +9,7 @@ function projectsByType(type: string) {
 </script>
 
 <template>
-    <h3>Personal Projects</h3>
+    <h3 class="projects-title">Personal Projects</h3>
     <div class="projects">
         <div v-for="project in projectsByType('personal')" class="project">
             <ProjectCard 
@@ -26,8 +26,13 @@ function projectsByType(type: string) {
 </template>
 
 <style>
+    .projects-title {
+        margin-bottom: 8px;
+        margin-left: 16px;
+    }
+    
     .projects {
-        margin: 32px 16px 32px 16px;
+        margin: 0 16px 32px 16px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         column-gap: 32px;
