@@ -11,8 +11,12 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
             <h1 class="my-name">Jasper Robert Pigason</h1>
         </div>
         <div class="social-links">
-            <img :src="linkedinIcon" />
-            <img :src="githubIcon" />
+            <a href="https://www.linkedin.com/in/jasper-pigason-566148177/" target="_blank">
+                <img :src="linkedinIcon" alt="LinkedIn" height="30" width="30" />
+            </a>
+            <a href="https://github.com/jrpdango" target="_blank">
+                <img :src="githubIcon" alt="GitHub" height="30" width="30"/>
+            </a>
         </div>
     </div>
 </template>
@@ -49,7 +53,12 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
         margin: 0;
     }
 
-    .social-links img {
+    .social-links a {
         margin-right: 8px;
+        transition: 0.2s ease-in-out;
+    }
+
+    .social-links a:hover {
+        transform: scale(1.25);
     }
 </style>
