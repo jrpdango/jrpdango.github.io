@@ -6,7 +6,7 @@ import { ThemedImageSource, Tech } from '../types';
 defineProps<{
     name: string,
     description: string,
-    thumbnail?: ThemedImageSource,
+    thumbnail: ThemedImageSource,
     sourceCodeUrl?: string,
     demoUrl?: string,
     myRole?: string,
@@ -19,19 +19,21 @@ defineProps<{
 
 <template>
     <div class="project-card">
-        <img 
+        <ThemedImage 
             class="project-thumbnail"
-            :src="thumbnail?.default ?? 'https://cdn.myanimelist.net/images/characters/6/29652.jpg'" 
-            alt="Temp Image" 
-            height="200"
+            :src="thumbnail" 
+            alt="Source code URL"
+            :height="200"
         />
         <h4>{{ name }}</h4>
         <div class="urls">
             <div v-if="sourceCodeUrl" class="project-url">
                 <ThemedImage 
-                    :src="'/source-code-light.svg'" 
+                    :src="{
+                        forDark: '/source-code-dark.svg',
+                        forLight: '/source-code-light.svg'
+                    }" 
                     alt="Source code URL"
-                    :src-dark="'/source-code-dark.svg'"
                     :height="30"
                     :width="30"
                 />

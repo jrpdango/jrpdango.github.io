@@ -4,8 +4,8 @@ type Tech = {
 };
 
 type ThemedImageSource = {
-    default: string;
-    alt?: string;
+    forDark: string;
+    forLight?: string;
 };
 
 export type { Tech, ThemedImageSource };

@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import { Theme, theme } from '../theme';
 import { computed } from 'vue';
+import { ThemedImageSource } from '../types';
 
 const props = defineProps<{
-    src: string,
+    src: ThemedImageSource,
     alt: string,
-    srcDark?: string,
     height?: number,
     width?: number
 }>();
 
 const image = computed(() => {
-    if(props.srcDark && theme.state === Theme.DARK) {
-        return props.srcDark;
+    if(props.src.forLight && theme.state === Theme.LIGHT) {
+        return props.src.forLight;
     } else {
-        return props.src;
+        return props.src.forDark;
     }
 });
 
