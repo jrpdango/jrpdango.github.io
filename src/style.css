@@ -1,5 +1,10 @@
+@font-face {
+  font-family: "Radio Canada Big";
+  src: url("@/assets/RadioCanadaBig-VariableFont_wght.ttf") format("truetype");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Radio Canada Big", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
