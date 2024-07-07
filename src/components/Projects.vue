@@ -31,6 +31,7 @@ function projectsByType(type: string) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         column-gap: 32px;
+        row-gap: 4px;
         justify-items: center;
     }
 
