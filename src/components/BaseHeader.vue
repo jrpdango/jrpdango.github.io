@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import linkedinIcon from '/linkedin-color.svg';
 import githubIcon from '/github-color.svg';
+import emailIcon from '/email.svg';
 import ThemeSwitcher from './ThemeSwitcher.vue';
 </script>
 
@@ -17,6 +18,9 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
             </a>
             <a href="https://github.com/jrpdango" target="_blank">
                 <img :src="githubIcon" alt="GitHub" height="30" width="30"/>
+            </a>
+            <a href="mailto:jrpigason@gmail.com" target="_blank">
+                <img :src="emailIcon" alt="jrpigason@gmail.com" height="30" width="30"/>
             </a>
         </div>
     </div>
