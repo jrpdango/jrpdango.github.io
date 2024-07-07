@@ -17,11 +17,10 @@ function toggleTheme() {
 
 <template>
     <div class="header" ref="header">
+        <ThemeSwitcher  @theme-changed="toggleTheme"/>
         <div class="top-row">
             <h2 class="my-name">Jasper Robert Pigason</h2>
-            <ThemeSwitcher  @theme-changed="toggleTheme"/>
         </div>
-        
         <div class="social-links">
             <img :src="linkedinIcon" />
             <img :src="githubIcon" />
@@ -35,7 +34,7 @@ function toggleTheme() {
     }
 
     .my-name {
-        margin-top: 24px;
+        margin-top: 40px;
     }
 
     .top-row {

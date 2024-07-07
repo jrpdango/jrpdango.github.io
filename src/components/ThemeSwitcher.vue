@@ -23,7 +23,8 @@ const indicator = computed(() => {
    .theme-switch {
         display: inline-block;
         height: 34px;
-        position: relative;
+        position: fixed;
+        right: 10px;
         width: 60px;
     } 
 
