@@ -2,6 +2,7 @@
 import githubIcon from '/github-color.svg';
 import { computed } from 'vue';
 import { theme } from '../theme';
+import ThemedImage from './ThemedImage.vue';
 
 type Tech = {
     name: string;
@@ -42,11 +43,12 @@ const cardThumbnail = computed(() => {
         <h4>{{ name }}</h4>
         <div class="urls">
             <div v-if="sourceCodeUrl" class="project-url">
-                <img 
-                    :src="githubIcon" 
-                    height="30"
-                    width="30"
-                    alt="Source code URL" 
+                <ThemedImage 
+                    :src="'/source-code-light.svg'" 
+                    alt="Source code URL"
+                    :src-dark="'/source-code-dark.svg'"
+                    :height="30"
+                    :width="30"
                 />
                 &nbsp;
                 <a :href="sourceCodeUrl" target="_blank">Source Code</a>

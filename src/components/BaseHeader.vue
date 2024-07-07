@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import githubIcon from '/github-color.svg';
 import linkedinIcon from '/linkedin-color.svg';
 import ThemeSwitcher from './ThemeSwitcher.vue';
 import { Theme, theme } from '../theme';
@@ -23,7 +22,6 @@ function toggleTheme() {
         </div>
         <div class="social-links">
             <img :src="linkedinIcon" />
-            <img :src="githubIcon" />
         </div>
     </div>
 </template>
