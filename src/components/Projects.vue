@@ -16,7 +16,6 @@ function projectsByType(type: string) {
                 :name="project.name" 
                 :description="project.description"
                 :thumbnail="project.thumbnail" 
-                :thumbnail-dark="project.thumbnailDark"
                 :source-code-url="project.sourceCodeUrl"
                 :demo-url="project.demoUrl"
                 :techs-used="project.techsUsed"

@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import githubIcon from '/github-color.svg';
-import { computed } from 'vue';
-import { theme } from '../theme';
 import ThemedImage from './ThemedImage.vue';
-import { Tech } from '../types';
+import { ThemedImageSource, Tech } from '../types';
 
-const props = defineProps<{
+defineProps<{
     name: string,
     description: string,
-    thumbnail?: string,
-    thumbnailDark?: string,
+    thumbnail?: ThemedImageSource,
     sourceCodeUrl?: string,
     demoUrl?: string,
     myRole?: string,
@@ -18,21 +15,13 @@ const props = defineProps<{
     techsUsed?: Tech[]
 }>();
 
-const cardThumbnail = computed(() => {
-    if(theme.state === 'dark' && props.thumbnailDark) {
-        return props.thumbnailDark;
-    } else {
-        return props.thumbnail;
-    }
-});
-
 </script>
 
 <template>
     <div class="project-card">
         <img 
             class="project-thumbnail"
-            :src="cardThumbnail ?? 'https://cdn.myanimelist.net/images/characters/6/29652.jpg'" 
+            :src="thumbnail?.default ?? 'https://cdn.myanimelist.net/images/characters/6/29652.jpg'" 
             alt="Temp Image" 
             height="200"
         />
