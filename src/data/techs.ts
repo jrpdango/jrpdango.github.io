@@ -100,6 +100,14 @@ const techs = {
     amazonec2: {
         name: "Amazon EC2",
         slug: "amazonec2"
+    },
+    puppeteer: {
+        name: "Puppeteer",
+        slug: "puppeteer"
+    },
+    jest: {
+        name: "Jest",
+        slug: "jest"
     }
 };
 

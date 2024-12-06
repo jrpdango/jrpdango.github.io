@@ -48,6 +48,26 @@ const projects = [
             techs.myanimelist
         ]
     },
+    {
+        name: "Page Summarizer",
+        description: "A proof of concept backend app for summarizing a page with AI. Contains an explanation and reasoning of tech used.",
+        thumbnail: {
+            forDark: "/page-summarizer.png"
+        },
+        sourceCodeUrl: "https://github.com/jrpdango/page-summarizer/tree/main",
+        type: "personal",
+        techsUsed: [
+            techs.vuedotjs,
+            techs.nodedotjs,
+            techs.javascript,
+            techs.html5,
+            techs.css3,
+            techs.express,
+            techs.sqlite,
+            techs.puppeteer,
+            techs.jest
+        ]
+    },
 ];
 
 export default projects;
