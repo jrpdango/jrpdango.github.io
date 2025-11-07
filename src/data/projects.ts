@@ -25,7 +25,7 @@ const projects = [
         thumbnail: {
             forDark: "/jp-counter.png"
         },
-        sourceCodeUrl: "https://jrpdango.github.io/gittop/display?repo=jp-counter&owner=jrpdango&token=wosvwqbCi0FoWXBvU2TCjCTDh8KmBsOZwr3DuMKcPm7DjgrClBJ9w4cow793TCwBwqsQcnoVB8OaJcKAwpdWey_CrBozQVPCvMKEw6nDqGhmwqVbwr3Cmg42w4BTAcKxw4_CuMKCAcK4cDrDiMKcN3LDsyJ7w4nCmSHDl8K1fAbCtErDuMKVw6ltw5rDusKCfQ_Dg8O0EMOxwrgJw6DDkGbDpcKUwp4CwqDDvWUUwpbCgcKXZw",
+        sourceCodeUrl: "https://jrpdango.github.io/gittop/display?repo=jp-counter&owner=jrpdango&token=w5dGwrnCocO7wpzDusO1KWYbegPDjMKaFwHCnCIxw5LDsAAPw41VwoTCpABfw6jDixDCv3LDmwpWwpE_EFzChcKXWRTCpcOvBsKow65la8OUwoHDqjgNw7YkaDfCl8Kow5XCoMONQkDCi2vCuz8ZbcK2L8OCwoNQCjbCnT9GLmrCg8KVVcKoP3XDgGNXwpRWGwXCncOKdTE-w6zDgMKywpnDpkDDucOawovCocKfwr_Dh8KgAWQ",
         type: "personal",
         techsUsed: [
             techs.rust,
@@ -40,7 +40,7 @@ const projects = [
         thumbnail: {
             forDark: "/miru.png"
         },
-        sourceCodeUrl: "https://jrpdango.github.io/gittop/display?repo=miru&owner=jrpdango&token=ccKPw54wAMKbw7tYASfCqHjDjMKracK7wrnDnQfDtmHCjyIpwpMhbsKoEg5EwrkKYMK7wpDCjMO5wrnDrsO3U8Ktw5A0GjPDjCI8dsKgIsOkKDckInfDq8Kqw7TCgC8Fw5TDgsKxKcOUw4NCV8KTwoTCgyUmCcOUwrXCm8OfworCt2YTw5XCosOvwqBiwo3CqMOKamcgC8KxwoEqMGY8NMO3w4FyAQLCujo1w7nCvsKac2gZEQ",
+        sourceCodeUrl: "https://jrpdango.github.io/gittop/display?repo=miru&owner=jrpdango&token=wqNgw6lHVsOmRGHDmMO2E2osdH9RwrgPNwPDulAxVsOdfkpyY8K9bMKRwr4mwo0FL1rCoMO5w5pkY8OZGMOfw4QwMytMwqZTw5XDk8O5BhfDu1rDkX7DtS_CkMOew4UGwr1gcgTChmIdTcKGwqsOdSY8wrEaw5PCrkUJw7zCjmwEw7_Cj2fClMKDwqY2LDXDmFQrT37CiH1sw7YXf8OsacOobsOJZsKLG8K6",
         type: "personal",
         techsUsed: [
             techs.flutter,

@@ -75,7 +75,7 @@ const techs = {
     },
     css3: {
         name: "CSS",
-        slug: "css3"
+        slug: "css"
     },
     dart: {
         name: "Dart",
