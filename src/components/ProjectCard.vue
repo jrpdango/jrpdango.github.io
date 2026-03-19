@@ -9,25 +9,16 @@ const props = defineProps<{
     sourceCodeUrl?: string;
     demoUrl?: string;
     techsUsed?: Tech[];
-    compact?: boolean;
 }>();
-
-const MAX_COMPACT_TECHS = 6;
-const visibleTechs = props.compact
-    ? (props.techsUsed ?? []).slice(0, MAX_COMPACT_TECHS)
-    : (props.techsUsed ?? []);
-const hiddenTechCount = props.compact
-    ? Math.max(0, (props.techsUsed ?? []).length - MAX_COMPACT_TECHS)
-    : 0;
 </script>
 
 <template>
-    <div class="project-card" :class="{ compact }">
+    <div class="project-card">
         <ThemedImage
             class="project-thumbnail"
             :src="thumbnail"
             alt="Project thumbnail"
-            :height="compact ? 140 : 200"
+            :height="200"
         />
         <h2 class="project-name">{{ name }}</h2>
         <div class="urls">
@@ -65,19 +56,16 @@ const hiddenTechCount = props.compact
         <div class="tech-used">
             <h4 class="section-label">Tech/Languages Used</h4>
             <div class="tech-list">
-                <div v-for="tech in visibleTechs" class="tech">
+                <div v-for="tech in (techsUsed ?? [])" class="tech">
                     <img
-                        :height="compact ? 18 : 24"
-                        :width="compact ? 18 : 24"
+                        :height="24"
+                        :width="24"
                         :src="`https://cdn.simpleicons.org/${tech.slug}`"
                         :alt="tech.name"
                         :title="tech.name"
                     />
-                    <p v-if="!compact">{{ tech.name }}</p>
+                    <p>{{ tech.name }}</p>
                 </div>
-                <span v-if="hiddenTechCount > 0" class="more-badge"
-                    >+{{ hiddenTechCount }}</span
-                >
             </div>
         </div>
     </div>
@@ -156,11 +144,6 @@ const hiddenTechCount = props.compact
     padding: 2px 6px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-}
-
-/* Compact mode: icons in a tight row, no labels */
-.compact .project-description {
-    min-height: unset;
 }
 
 @media (max-width: 810px) {

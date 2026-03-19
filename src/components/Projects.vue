@@ -2,9 +2,7 @@
 import ProjectCard from "./ProjectCard.vue";
 import projects from "../data/projects.ts";
 
-const professionalProjects = projects.filter(
-    (p) => p.type === "professional"
-);
+const professionalProjects = projects.filter((p) => p.type === "professional");
 const personalProjects = projects.filter((p) => p.type === "personal");
 </script>
 
@@ -13,10 +11,7 @@ const personalProjects = projects.filter((p) => p.type === "personal");
         <template v-if="professionalProjects.length > 0">
             <h2 class="section-title">Professional Projects</h2>
             <div class="projects">
-                <div
-                    v-for="project in professionalProjects"
-                    class="project"
-                >
+                <div v-for="project in professionalProjects" class="project">
                     <ProjectCard
                         :name="project.name"
                         :description="project.description"
@@ -24,7 +19,6 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                         :source-code-url="project.sourceCodeUrl"
                         :demo-url="project.demoUrl"
                         :techs-used="project.techsUsed"
-                        :compact="true"
                     />
                 </div>
             </div>
