@@ -1,12 +1,12 @@
-import { reactive } from 'vue';
+import { reactive } from "vue";
 
 enum Theme {
     DARK = "dark",
-    LIGHT = "light"
-  };
+    LIGHT = "light",
+}
 
 const theme = reactive({
-    state: Theme.DARK
+    state: Theme.DARK,
 });
 
 export { Theme, theme };

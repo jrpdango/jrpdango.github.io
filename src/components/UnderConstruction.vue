@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <div class="main-text">
@@ -9,13 +7,13 @@
 </template>
 
 <style scoped>
-    .main-text {
-        display: flex;
-        width: 100%;
-        align-items: center;
-    }
+.main-text {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
 
-    .main-text p {
-        color: whitesmoke;
-    }
+.main-text p {
+    color: whitesmoke;
+}
 </style>

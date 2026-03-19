@@ -3,112 +3,112 @@
 const techs = {
     nodedotjs: {
         name: "Node.js",
-        slug: "nodedotjs"
+        slug: "nodedotjs",
     },
     mysql: {
         name: "MySQL",
-        slug: "mysql"
+        slug: "mysql",
     },
     mongodb: {
         name: "MongoDB",
-        slug: "mongodb"
+        slug: "mongodb",
     },
     express: {
         name: "Express.js",
-        slug: "express"
+        slug: "express",
     },
     vuedotjs: {
         name: "Vue.js",
-        slug: "vuedotjs"
+        slug: "vuedotjs",
     },
     tailwindcss: {
         name: "Tailwind CSS",
-        slug: "tailwindcss"
+        slug: "tailwindcss",
     },
     graphql: {
         name: "GraphQL",
-        slug: "graphql"
+        slug: "graphql",
     },
     gnubash: {
         name: "Bash",
-        slug: "gnubash"
+        slug: "gnubash",
     },
     rockylinux: {
         name: "Rocky Linux",
-        slug: "rockylinux"
+        slug: "rockylinux",
     },
     jetpackcompose: {
         name: "Jetpack Compose",
-        slug: "jetpackcompose"
+        slug: "jetpackcompose",
     },
     javascript: {
         name: "JavaScript",
-        slug: "javascript"
+        slug: "javascript",
     },
     kotlin: {
         name: "Kotlin",
-        slug: "kotlin"
+        slug: "kotlin",
     },
     flutter: {
         name: "Flutter",
-        slug: "flutter"
+        slug: "flutter",
     },
     react: {
         name: "React",
-        slug: "react"
+        slug: "react",
     },
     rust: {
         name: "Rust",
-        slug: "rust"
+        slug: "rust",
     },
     sqlite: {
         name: "SQLite",
-        slug: "sqlite"
+        slug: "sqlite",
     },
     myanimelist: {
         name: "MyAnimeList",
-        slug: "myanimelist"
+        slug: "myanimelist",
     },
     html5: {
         name: "HTML",
-        slug: "html5"
+        slug: "html5",
     },
     css3: {
         name: "CSS",
-        slug: "css"
+        slug: "css",
     },
     dart: {
         name: "Dart",
-        slug: "dart"
+        slug: "dart",
     },
     ubuntu: {
         name: "Ubuntu",
-        slug: "ubuntu"
+        slug: "ubuntu",
     },
     swift: {
         name: "Swift",
-        slug: "swift"
+        slug: "swift",
     },
     firebase: {
         name: "Firebase",
-        slug: "firebase"
+        slug: "firebase",
     },
     googleMLKit: {
         name: "Google ML Kit",
-        slug: "Android"
+        slug: "Android",
     },
     amazonec2: {
         name: "Amazon EC2",
-        slug: "amazonec2"
+        slug: "amazonec2",
     },
     puppeteer: {
         name: "Puppeteer",
-        slug: "puppeteer"
+        slug: "puppeteer",
     },
     jest: {
         name: "Jest",
-        slug: "jest"
-    }
+        slug: "jest",
+    },
 };
 
 export default techs;

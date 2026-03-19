@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import linkedinIcon from '/linkedin-color.svg';
-import githubIcon from '/github-color.svg';
-import emailIcon from '/email.svg';
-import ThemeSwitcher from './ThemeSwitcher.vue';
+import linkedinIcon from "/linkedin-color.svg";
+import githubIcon from "/github-color.svg";
+import emailIcon from "/email.svg";
+import ThemeSwitcher from "./ThemeSwitcher.vue";
 </script>
 
 <template>
@@ -10,64 +10,80 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
         <ThemeSwitcher />
         <div class="top-row">
             <h1 class="my-name">Jasper Robert Pigason</h1>
-            <p class="my-description">I like messing around with different technologies to see what I can make from them.</p>
+            <p class="my-description">
+                I like messing around with different technologies to see what I
+                can make from them.
+            </p>
         </div>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/jasper-pigason-566148177/" target="_blank">
-                <img :src="linkedinIcon" alt="LinkedIn" height="30" width="30" />
+            <a
+                href="https://www.linkedin.com/in/jasper-pigason-566148177/"
+                target="_blank"
+            >
+                <img
+                    :src="linkedinIcon"
+                    alt="LinkedIn"
+                    height="30"
+                    width="30"
+                />
             </a>
             <a href="https://github.com/jrpdango" target="_blank">
-                <img :src="githubIcon" alt="GitHub" height="30" width="30"/>
+                <img :src="githubIcon" alt="GitHub" height="30" width="30" />
             </a>
             <a href="mailto:jrpigason@gmail.com" target="_blank">
-                <img :src="emailIcon" alt="jrpigason@gmail.com" height="30" width="30"/>
+                <img
+                    :src="emailIcon"
+                    alt="jrpigason@gmail.com"
+                    height="30"
+                    width="30"
+                />
             </a>
         </div>
     </div>
 </template>
 
 <style scoped>
-    .header {
-        margin-left: 16px;
-    }
+.header {
+    margin-left: 16px;
+}
 
+.my-name {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 1.75rem;
+}
+
+.my-description {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+@media (min-width: 404px) {
     .my-name {
-        margin-top: 40px;
-        margin-bottom: 0;
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
+}
 
-    .my-description {
-        margin-top: 0;
-        margin-bottom: 8px;
-    }
+.top-row {
+    display: block;
+}
 
-    @media (min-width: 404px) {
-        .my-name {
-            font-size: 2rem;
-        }
-    }
+.theme-switcher {
+    height: fit-content;
+}
 
-    .top-row {
-        display: block;
-    }
+.social-links {
+    height: 1.75rem;
+    display: flex;
+    margin: 0;
+}
 
-    .theme-switcher {
-        height: fit-content;
-    }
+.social-links a {
+    margin-right: 8px;
+    transition: 0.2s ease-in-out;
+}
 
-    .social-links {
-        height: 1.75rem;
-        display: flex;
-        margin: 0;
-    }
-
-    .social-links a {
-        margin-right: 8px;
-        transition: 0.2s ease-in-out;
-    }
-
-    .social-links a:hover {
-        transform: scale(1.25);
-    }
+.social-links a:hover {
+    transform: scale(1.25);
+}
 </style>
