@@ -67,6 +67,16 @@ const projects: Project[] = [
             techs.jest,
         ],
     },
+    {
+        name: "MIDI",
+        description:
+            "A website for MIDI, a medical & life science development company.",
+        thumbnail: {
+            forDark: "",
+        },
+        type: "professional",
+        techsUsed: [techs.javascript, techs.php],
+    },
 ];
 
 export default projects;

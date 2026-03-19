@@ -109,6 +109,10 @@ const techs = {
         name: "Jest",
         slug: "jest",
     },
+    php: {
+        name: "PHP",
+        slug: "php",
+    },
 };
 
 export default techs;
