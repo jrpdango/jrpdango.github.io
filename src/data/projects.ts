@@ -1,6 +1,7 @@
 import techs from "./techs";
+import { Project } from "../types";
 
-const projects = [
+const projects: Project[] = [
     {
         name: "Gittop",
         description:

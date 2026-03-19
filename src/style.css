@@ -21,6 +21,22 @@
     -moz-osx-font-smoothing: grayscale;
 
     --border-color: #3e3e3e;
+    --sidebar-width: 52px;
+    --bottombar-height: 56px;
+    --content-padding-x: 32px;
+    --content-padding-x-mobile: 20px;
+    --spacing-xs: 16px;
+    --spacing-sm: 24px;
+    --spacing-md: 32px;
+    --spacing-lg: 40px;
+    --spacing-xl: 48px;
+
+    /*
+     * Breakpoints (cannot be used in @media, listed here for reference):
+     * --bp-mobile:  768px
+     * --bp-card:    810px
+     * --bp-desktop: 1300px
+     */
 }
 
 [data-theme="dark"] {

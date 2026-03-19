@@ -2,26 +2,32 @@
 import ThemedImage from "./ThemedImage.vue";
 import { ThemedImageSource, Tech } from "../types";
 
-defineProps<{
+const props = defineProps<{
     name: string;
     description: string;
     thumbnail: ThemedImageSource;
     sourceCodeUrl?: string;
     demoUrl?: string;
-    myRole?: string;
-    difficulties?: string;
-    solution?: string;
     techsUsed?: Tech[];
+    compact?: boolean;
 }>();
+
+const MAX_COMPACT_TECHS = 6;
+const visibleTechs = props.compact
+    ? (props.techsUsed ?? []).slice(0, MAX_COMPACT_TECHS)
+    : (props.techsUsed ?? []);
+const hiddenTechCount = props.compact
+    ? Math.max(0, (props.techsUsed ?? []).length - MAX_COMPACT_TECHS)
+    : 0;
 </script>
 
 <template>
-    <div class="project-card">
+    <div class="project-card" :class="{ compact }">
         <ThemedImage
             class="project-thumbnail"
             :src="thumbnail"
-            alt="Source code URL"
-            :height="200"
+            alt="Project thumbnail"
+            :height="compact ? 140 : 200"
         />
         <h2 class="project-name">{{ name }}</h2>
         <div class="urls">
@@ -31,7 +37,7 @@ defineProps<{
                         forDark: '/source-code-dark.svg',
                         forLight: '/source-code-light.svg',
                     }"
-                    alt="Source code URL"
+                    alt="Source code"
                     :height="30"
                     :width="30"
                 />
@@ -47,7 +53,7 @@ defineProps<{
                         forDark: '/demo-dark.svg',
                         forLight: '/demo-light.svg',
                     }"
-                    alt="Project URL"
+                    alt="Live demo"
                     :height="30"
                     :width="30"
                 />
@@ -57,14 +63,21 @@ defineProps<{
         </div>
         <p class="project-description">{{ description }}</p>
         <div class="tech-used">
-            <h4 class="section-title">Tech/Languages I Used</h4>
-            <div v-for="tech in techsUsed" class="tech">
-                <img
-                    height="24"
-                    width="24"
-                    :src="`https://cdn.simpleicons.org/${tech.slug}`"
-                />
-                <p>{{ tech.name }}</p>
+            <h4 class="section-label">Tech/Languages Used</h4>
+            <div class="tech-list">
+                <div v-for="tech in visibleTechs" class="tech">
+                    <img
+                        :height="compact ? 18 : 24"
+                        :width="compact ? 18 : 24"
+                        :src="`https://cdn.simpleicons.org/${tech.slug}`"
+                        :alt="tech.name"
+                        :title="tech.name"
+                    />
+                    <p v-if="!compact">{{ tech.name }}</p>
+                </div>
+                <span v-if="hiddenTechCount > 0" class="more-badge"
+                    >+{{ hiddenTechCount }}</span
+                >
             </div>
         </div>
     </div>
@@ -74,8 +87,8 @@ defineProps<{
 .project-card {
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
     padding: 16px;
 }
 
@@ -87,16 +100,21 @@ defineProps<{
 }
 
 .project-name {
-    margin-bottom: 8px;
+    margin: 12px 0 6px;
+    font-size: 1.1rem;
 }
 
 .project-description {
     min-height: 72px;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .urls {
     display: flex;
     align-items: center;
+    min-height: 36px;
+    margin-bottom: 4px;
 }
 
 .project-url {
@@ -105,30 +123,50 @@ defineProps<{
     padding-right: 8px;
 }
 
-.section-title {
-    margin-bottom: 8px;
+.section-label {
+    margin: 0 0 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
 }
 
 .tech {
     display: flex;
     align-items: center;
-}
-
-.tech img {
-    margin-right: 8px;
+    gap: 6px;
 }
 
 .tech p {
-    margin: 4px;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.more-badge {
+    font-size: 0.75rem;
+    opacity: 0.55;
+    padding: 2px 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* Compact mode: icons in a tight row, no labels */
+.compact .project-description {
+    min-height: unset;
 }
 
 @media (max-width: 810px) {
     .urls {
         flex-direction: column;
-    }
-
-    .project-url {
-        align-self: start;
+        align-items: flex-start;
     }
 
     .divider {

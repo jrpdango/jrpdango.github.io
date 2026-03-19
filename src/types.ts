@@ -8,4 +8,14 @@ type ThemedImageSource = {
     forLight?: string;
 };
 
-export type { Tech, ThemedImageSource };
+type Project = {
+    name: string;
+    description: string;
+    thumbnail: ThemedImageSource;
+    sourceCodeUrl?: string;
+    demoUrl?: string;
+    type: "professional" | "personal";
+    techsUsed?: Tech[];
+};
+
+export type { Tech, ThemedImageSource, Project };
