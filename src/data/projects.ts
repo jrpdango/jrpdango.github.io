@@ -85,7 +85,7 @@ const projects: Project[] = [
         description:
             "A website for MIDI, a medical & life science development company.",
         thumbnail: {
-            forDark: "",
+            forDark: "/midi.png",
         },
         type: "professional",
         techsUsed: [siTypescript, siPhp],
