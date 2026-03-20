@@ -17,6 +17,11 @@ import {
     siJest,
     siPhp,
     siTypescript,
+    siAndroid,
+    siIos,
+    siKotlin,
+    siSwift,
+    siFirebase,
 } from "simple-icons";
 import { Project } from "../types";
 
@@ -90,6 +95,18 @@ const projects: Project[] = [
         type: "professional",
         techsUsed: [siTypescript, siPhp],
         liveSiteUrl: "https://midipd.com/",
+    },
+    {
+        name: "Doc Ayn",
+        description:
+            "A women's health mobile app that helps book OB-GYN appointments, as well as monitor periods, pregnancies, and medications.",
+        thumbnail: {
+            forDark: "/docayn.png",
+        },
+        type: "professional",
+        techsUsed: [siAndroid, siIos, siKotlin, siSwift, siFirebase],
+        liveSiteUrl:
+            "https://play.google.com/store/apps/details?id=com.docayn.app",
     },
 ];
 
