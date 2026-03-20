@@ -4,7 +4,10 @@
     <div class="header">
         <h1 class="my-name">Jasper Robert Pigason</h1>
         <p class="my-description">
-            Software Developer. <!-- Add your bio here -->
+            I'm a full stack developer who enjoys dabbling in a little bit of
+            everything. <br />
+            If learning is pain, then I'm a masochist. I probably could've
+            thought of a better metaphor, but you get it.
         </p>
     </div>
 </template>
@@ -29,7 +32,8 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: var(--spacing-md) var(--content-padding-x-mobile) var(--spacing-sm);
+        padding: var(--spacing-md) var(--content-padding-x-mobile)
+            var(--spacing-sm);
     }
 
     .my-name {
