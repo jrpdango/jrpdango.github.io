@@ -89,6 +89,7 @@ const projects: Project[] = [
         },
         type: "professional",
         techsUsed: [siTypescript, siPhp],
+        liveSiteUrl: "https://midipd.com/",
     },
 ];
 

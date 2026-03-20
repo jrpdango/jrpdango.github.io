@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ThemedImage from "./ThemedImage.vue";
 import { ThemedImageSource, SimpleIcon } from "../types";
+import { computed } from "vue";
 
 const props = defineProps<{
     name: string;
@@ -8,8 +9,43 @@ const props = defineProps<{
     thumbnail: ThemedImageSource;
     sourceCodeUrl?: string;
     demoUrl?: string;
+    liveSiteUrl?: string;
     techsUsed?: SimpleIcon[];
 }>();
+
+const urls = computed(() => {
+    const result: {
+        label: string;
+        href: string;
+        icon?: { forDark: string; forLight: string };
+        alt?: string;
+    }[] = [];
+    if (props.sourceCodeUrl)
+        result.push({
+            label: "Source Code",
+            href: props.sourceCodeUrl,
+            icon: {
+                forDark: "/source-code-dark.svg",
+                forLight: "/source-code-light.svg",
+            },
+            alt: "Source code",
+        });
+    if (props.demoUrl)
+        result.push({
+            label: "Live Demo",
+            href: props.demoUrl,
+            icon: { forDark: "/demo-dark.svg", forLight: "/demo-light.svg" },
+            alt: "Live demo",
+        });
+    if (props.liveSiteUrl)
+        result.push({
+            label: "Visit Site",
+            href: props.liveSiteUrl,
+            icon: { forDark: "/globe-dark.svg", forLight: "/globe-light.svg" },
+            alt: "Visit Site",
+        });
+    return result;
+});
 </script>
 
 <template>
@@ -22,41 +58,26 @@ const props = defineProps<{
         />
         <h2 class="project-name">{{ name }}</h2>
         <div class="urls">
-            <div v-if="sourceCodeUrl" class="project-url">
-                <ThemedImage
-                    :src="{
-                        forDark: '/source-code-dark.svg',
-                        forLight: '/source-code-light.svg',
-                    }"
-                    alt="Source code"
-                    :height="30"
-                    :width="30"
-                />
-                &nbsp;
-                <a :href="sourceCodeUrl" target="_blank">Source Code</a>
-            </div>
-            <span v-if="sourceCodeUrl && demoUrl" class="divider"
-                >| &nbsp;</span
-            >
-            <div v-if="demoUrl" class="project-url">
-                <ThemedImage
-                    :src="{
-                        forDark: '/demo-dark.svg',
-                        forLight: '/demo-light.svg',
-                    }"
-                    alt="Live demo"
-                    :height="30"
-                    :width="30"
-                />
-                &nbsp;
-                <a :href="demoUrl" target="_blank">Live Demo</a>
-            </div>
+            <template v-for="(url, index) in urls" :key="url.href">
+                <div v-if="index > 0" class="divider">| &nbsp;</div>
+                <div class="project-url">
+                    <ThemedImage
+                        v-if="url.icon"
+                        :src="url.icon"
+                        :alt="url.alt || ''"
+                        :height="30"
+                        :width="30"
+                    />&nbsp;<a :href="url.href" target="_blank">{{
+                        url.label
+                    }}</a>
+                </div>
+            </template>
         </div>
         <p class="project-description">{{ description }}</p>
         <div class="tech-used">
             <h4 class="section-label">Tech/Languages Used</h4>
             <div class="tech-list">
-                <div v-for="tech in (techsUsed ?? [])" class="tech">
+                <div v-for="tech in techsUsed ?? []" class="tech">
                     <img
                         :height="24"
                         :width="24"

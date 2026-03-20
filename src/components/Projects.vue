@@ -18,6 +18,7 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                         :thumbnail="project.thumbnail"
                         :source-code-url="project.sourceCodeUrl"
                         :demo-url="project.demoUrl"
+                        :live-site-url="project.liveSiteUrl"
                         :techs-used="project.techsUsed"
                     />
                 </div>
@@ -33,6 +34,7 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                     :thumbnail="project.thumbnail"
                     :source-code-url="project.sourceCodeUrl"
                     :demo-url="project.demoUrl"
+                    :live-site-url="project.liveSiteUrl"
                     :techs-used="project.techsUsed"
                 />
             </div>

@@ -11,6 +11,7 @@ type Project = {
     thumbnail: ThemedImageSource;
     sourceCodeUrl?: string;
     demoUrl?: string;
+    liveSiteUrl?: string;
     type: "professional" | "personal";
     techsUsed?: SimpleIcon[];
 };
