@@ -85,19 +85,16 @@ const urls = computed(() => {
                 </template>
             </div>
             <p class="project-description">{{ description }}</p>
-            <div class="tech-used">
-                <h4 class="section-label">Tech/Languages Used</h4>
-                <div class="tech-list">
-                    <div v-for="tech in techsUsed ?? []" class="tech">
-                        <img
-                            :height="18"
-                            :width="18"
-                            :src="`https://cdn.simpleicons.org/${tech.slug}`"
-                            :alt="tech.title"
-                            :title="tech.title"
-                        />
-                        <p>{{ tech.title }}</p>
-                    </div>
+            <div class="tech-list">
+                <div v-for="tech in techsUsed ?? []" class="tech">
+                    <img
+                        :height="18"
+                        :width="18"
+                        :src="`https://cdn.simpleicons.org/${tech.slug}`"
+                        :alt="tech.title"
+                        :title="tech.title"
+                    />
+                    <p>{{ tech.title }}</p>
                 </div>
             </div>
         </div>
@@ -111,7 +108,9 @@ const urls = computed(() => {
     border: 1px solid var(--border-color);
     border-radius: var(--card-radius);
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .project-card:hover {
@@ -173,15 +172,6 @@ const urls = computed(() => {
     display: flex;
     align-items: center;
     padding-right: 8px;
-}
-
-.section-label {
-    margin: 0 0 8px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    opacity: 0.5;
 }
 
 .tech-list {
