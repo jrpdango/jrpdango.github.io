@@ -66,7 +66,7 @@ const personalProjects = projects.filter((p) => p.type === "personal");
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 24px;
-    row-gap: 24px;
+    row-gap: 4px;
     margin-bottom: var(--spacing-lg);
 }
 
