@@ -9,6 +9,7 @@ type Project = {
     name: string;
     description: string;
     thumbnail: ThemedImageSource;
+    hasBlurredBackground?: boolean;
     sourceCodeUrl?: string;
     demoUrl?: string;
     liveSiteUrl?: string;

@@ -34,6 +34,7 @@ const projects: Project[] = [
             forLight: "/gittop-full.png",
             forDark: "/gittop-full-transparent.png",
         },
+        hasBlurredBackground: false,
         sourceCodeUrl: "https://github.com/jrpdango/gittop",
         demoUrl:
             "https://jrpdango.github.io/gittop/display?repo=gittop-demo&owner=jrpdango&token=QMO_wqrCr3YuZXXDsGxQKwfCrsOhwozCl8OSw6Z3wo3CisKCwqbDvMO4KjvDtRDDu8KHwo_CvcKTw7XCv1LDusOjw7REZWvDrsOQLcOZwpJdw6tWRxIVw5EKw6nDmiYjwpXDrsOcw7nCkCnCncOmwrB9w7DCuMKpw4LCoALCtUDCk8ODFMO_WyTCuMOFXnfDlWdIw73Dg8K2CsOxQFfCvmPCq8KIw7rCtFlSw4cGGMKhwqjDk0pKwopCVh8SdA",
@@ -103,6 +104,7 @@ const projects: Project[] = [
         thumbnail: {
             forDark: "/docayn.png",
         },
+        hasBlurredBackground: false,
         type: "professional",
         techsUsed: [siAndroid, siIos, siKotlin, siSwift, siFirebase],
         liveSiteUrl:
