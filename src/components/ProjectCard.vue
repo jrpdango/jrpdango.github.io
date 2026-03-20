@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ThemedImage from "./ThemedImage.vue";
-import { ThemedImageSource, Tech } from "../types";
+import { ThemedImageSource, SimpleIcon } from "../types";
 
 const props = defineProps<{
     name: string;
@@ -8,7 +8,7 @@ const props = defineProps<{
     thumbnail: ThemedImageSource;
     sourceCodeUrl?: string;
     demoUrl?: string;
-    techsUsed?: Tech[];
+    techsUsed?: SimpleIcon[];
 }>();
 </script>
 
@@ -61,10 +61,10 @@ const props = defineProps<{
                         :height="24"
                         :width="24"
                         :src="`https://cdn.simpleicons.org/${tech.slug}`"
-                        :alt="tech.name"
-                        :title="tech.name"
+                        :alt="tech.title"
+                        :title="tech.title"
                     />
-                    <p>{{ tech.name }}</p>
+                    <p>{{ tech.title }}</p>
                 </div>
             </div>
         </div>

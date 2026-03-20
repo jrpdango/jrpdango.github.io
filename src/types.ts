@@ -1,7 +1,4 @@
-type Tech = {
-    name: string;
-    slug: string;
-};
+import type { SimpleIcon } from "simple-icons";
 
 type ThemedImageSource = {
     forDark: string;
@@ -15,7 +12,7 @@ type Project = {
     sourceCodeUrl?: string;
     demoUrl?: string;
     type: "professional" | "personal";
-    techsUsed?: Tech[];
+    techsUsed?: SimpleIcon[];
 };
 
-export type { Tech, ThemedImageSource, Project };
+export type { ThemedImageSource, Project, SimpleIcon };
