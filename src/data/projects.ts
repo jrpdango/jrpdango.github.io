@@ -16,6 +16,7 @@ import {
     siPuppeteer,
     siJest,
     siPhp,
+    siTypescript,
 } from "simple-icons";
 import { Project } from "../types";
 
@@ -87,7 +88,7 @@ const projects: Project[] = [
             forDark: "",
         },
         type: "professional",
-        techsUsed: [siJavascript, siPhp],
+        techsUsed: [siTypescript, siPhp],
     },
 ];
 
