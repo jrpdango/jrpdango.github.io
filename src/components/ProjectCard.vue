@@ -69,18 +69,19 @@ const urls = computed(() => {
         <div class="card-body">
             <h2 class="project-name">{{ name }}</h2>
             <div class="urls">
-                <template v-for="(url, index) in urls" :key="url.href">
-                    <div v-if="index > 0" class="divider">| &nbsp;</div>
+                <template v-for="url in urls" :key="url.href">
                     <div class="project-url">
-                        <ThemedImage
-                            v-if="url.icon"
-                            :src="url.icon"
-                            :alt="url.alt || ''"
-                            :height="30"
-                            :width="30"
-                        />&nbsp;<a :href="url.href" target="_blank">{{
-                            url.label
-                        }}</a>
+                        <a :href="url.href" target="_blank">
+                            <button>
+                                <ThemedImage
+                                    v-if="url.icon"
+                                    :src="url.icon"
+                                    :alt="url.alt || ''"
+                                    :height="30"
+                                    :width="30"
+                                />&nbsp;{{ url.label }}
+                            </button>
+                        </a>
                     </div>
                 </template>
             </div>
@@ -174,6 +175,30 @@ const urls = computed(() => {
     padding-right: 8px;
 }
 
+.project-url a {
+    text-decoration: none;
+}
+
+.project-url button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: var(--card-body-bg);
+    color: var(--color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.project-url button:hover {
+    background-color: var(--tech-badge-bg);
+}
+
 .tech-list {
     display: flex;
     flex-wrap: wrap;
@@ -201,8 +226,8 @@ const urls = computed(() => {
         align-items: flex-start;
     }
 
-    .divider {
-        display: none;
+    .project-url:not(:first-child) {
+        padding-top: 8px;
     }
 }
 </style>
