@@ -11,44 +11,43 @@ const props = defineProps<{
     sourceCodeUrl?: string;
     demoUrl?: string;
     liveSiteUrl?: string;
+    companySiteUrl?: string;
     techsUsed?: SimpleIcon[];
 }>();
 
 const showBlur = computed(() => props.hasBlurredBackground !== false);
 
-const urls = computed(() => {
-    const result: {
-        label: string;
-        href: string;
-        icon?: { forDark: string; forLight: string };
-        alt?: string;
-    }[] = [];
-    if (props.sourceCodeUrl)
-        result.push({
-            label: "Source Code",
-            href: props.sourceCodeUrl,
-            icon: {
-                forDark: "/source-code-dark.svg",
-                forLight: "/source-code-light.svg",
-            },
-            alt: "Source code",
-        });
-    if (props.demoUrl)
-        result.push({
-            label: "Live Demo",
-            href: props.demoUrl,
-            icon: { forDark: "/demo-dark.svg", forLight: "/demo-light.svg" },
-            alt: "Live demo",
-        });
-    if (props.liveSiteUrl)
-        result.push({
-            label: "Visit Site",
-            href: props.liveSiteUrl,
-            icon: { forDark: "/globe-dark.svg", forLight: "/globe-light.svg" },
-            alt: "Visit Site",
-        });
-    return result;
-});
+const urlConfigs = [
+    {
+        prop: "sourceCodeUrl",
+        label: "Source Code",
+        icon: {
+            forDark: "/source-code-dark.svg",
+            forLight: "/source-code-light.svg",
+        },
+    },
+    {
+        prop: "demoUrl",
+        label: "Live Demo",
+        icon: { forDark: "/demo-dark.svg", forLight: "/demo-light.svg" },
+    },
+    {
+        prop: "liveSiteUrl",
+        label: "Visit Site",
+        icon: { forDark: "/globe-dark.svg", forLight: "/globe-light.svg" },
+    },
+    {
+        prop: "companySiteUrl",
+        label: "Company Site",
+        icon: { forDark: "/globe-dark.svg", forLight: "/globe-light.svg" },
+    },
+] as const;
+
+const urls = computed(() =>
+    urlConfigs
+        .filter(({ prop }) => props[prop])
+        .map(({ prop, label, icon }) => ({ label, href: props[prop], icon })),
+);
 </script>
 
 <template>
@@ -76,7 +75,7 @@ const urls = computed(() => {
                                 <ThemedImage
                                     v-if="url.icon"
                                     :src="url.icon"
-                                    :alt="url.alt || ''"
+                                    :alt="url.label"
                                     :height="30"
                                     :width="30"
                                 />&nbsp;{{ url.label }}

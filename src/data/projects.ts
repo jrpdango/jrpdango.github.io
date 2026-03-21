@@ -142,6 +142,7 @@ const projects: Project[] = [
         hasBlurredBackground: false,
         type: "professional",
         techsUsed: [siTypescript, siNestjs],
+        companySiteUrl: "https://attictours.asia",
     },
 ];
 

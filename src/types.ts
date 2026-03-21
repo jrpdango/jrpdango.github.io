@@ -13,6 +13,7 @@ type Project = {
     sourceCodeUrl?: string;
     demoUrl?: string;
     liveSiteUrl?: string;
+    companySiteUrl?: string;
     type: "professional" | "personal";
     techsUsed?: SimpleIcon[];
 };

@@ -20,6 +20,7 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                         :source-code-url="project.sourceCodeUrl"
                         :demo-url="project.demoUrl"
                         :live-site-url="project.liveSiteUrl"
+                        :company-site-url="project.companySiteUrl"
                         :techs-used="project.techsUsed"
                     />
                 </div>
