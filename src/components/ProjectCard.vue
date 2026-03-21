@@ -2,6 +2,7 @@
 import ThemedImage from "./ThemedImage.vue";
 import { ThemedImageSource, SimpleIcon } from "../types";
 import { computed } from "vue";
+import { Code, Play, Internet } from "@iconoir/vue";
 
 const props = defineProps<{
     name: string;
@@ -18,29 +19,10 @@ const props = defineProps<{
 const showBlur = computed(() => props.hasBlurredBackground !== false);
 
 const urlConfigs = [
-    {
-        prop: "sourceCodeUrl",
-        label: "Source Code",
-        icon: {
-            forDark: "/source-code-dark.svg",
-            forLight: "/source-code-light.svg",
-        },
-    },
-    {
-        prop: "demoUrl",
-        label: "Live Demo",
-        icon: { forDark: "/demo-dark.svg", forLight: "/demo-light.svg" },
-    },
-    {
-        prop: "liveSiteUrl",
-        label: "Visit Site",
-        icon: { forDark: "/globe-dark.svg", forLight: "/globe-light.svg" },
-    },
-    {
-        prop: "companySiteUrl",
-        label: "Company Site",
-        icon: { forDark: "/globe-dark.svg", forLight: "/globe-light.svg" },
-    },
+    { prop: "sourceCodeUrl", label: "Source Code", icon: Code },
+    { prop: "demoUrl", label: "Live Demo", icon: Play },
+    { prop: "liveSiteUrl", label: "Visit Site", icon: Internet },
+    { prop: "companySiteUrl", label: "Company Site", icon: Internet },
 ] as const;
 
 const urls = computed(() =>
@@ -72,13 +54,12 @@ const urls = computed(() =>
                     <div class="project-url">
                         <a :href="url.href" target="_blank">
                             <button>
-                                <ThemedImage
-                                    v-if="url.icon"
-                                    :src="url.icon"
-                                    :alt="url.label"
-                                    :height="30"
-                                    :width="30"
-                                />&nbsp;{{ url.label }}
+                                <component
+                                    :is="url.icon"
+                                    :height="20"
+                                    :width="20"
+                                />
+                                {{ url.label }}
                             </button>
                         </a>
                     </div>
