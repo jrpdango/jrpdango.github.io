@@ -42,18 +42,6 @@ const projects: Project[] = [
         techsUsed: [siReact, siNodedotjs],
     },
     {
-        name: "JP Counter",
-        description:
-            "A simple CLI tracker I use to count correct/wrong answers when studying vocabulary. Keeps data in an SQLite database and automatically syncs to its GitHub repository.",
-        thumbnail: {
-            forDark: "/jp-counter.png",
-        },
-        sourceCodeUrl:
-            "https://jrpdango.github.io/gittop/display?repo=jp-counter&owner=jrpdango&token=w5dGwrnCocO7wpzDusO1KWYbegPDjMKaFwHCnCIxw5LDsAAPw41VwoTCpABfw6jDixDCv3LDmwpWwpE_EFzChcKXWRTCpcOvBsKow65la8OUwoHDqjgNw7YkaDfCl8Kow5XCoMONQkDCi2vCuz8ZbcK2L8OCwoNQCjbCnT9GLmrCg8KVVcKoP3XDgGNXwpRWGwXCncOKdTE-w6zDgMKywpnDpkDDucOawovCocKfwr_Dh8KgAWQ",
-        type: "personal",
-        techsUsed: [siRust, siGnubash, siSqlite, siUbuntu],
-    },
-    {
         name: "miru",
         description:
             "A mobile MyAnimeList client demo I made to easily access a list of shows I've watched or plan to watch.",
@@ -64,6 +52,18 @@ const projects: Project[] = [
             "https://jrpdango.github.io/gittop/display?repo=miru&owner=jrpdango&token=wqNgw6lHVsOmRGHDmMO2E2osdH9RwrgPNwPDulAxVsOdfkpyY8K9bMKRwr4mwo0FL1rCoMO5w5pkY8OZGMOfw4QwMytMwqZTw5XDk8O5BhfDu1rDkX7DtS_CkMOew4UGwr1gcgTChmIdTcKGwqsOdSY8wrEaw5PCrkUJw7zCjmwEw7_Cj2fClMKDwqY2LDXDmFQrT37CiH1sw7YXf8OsacOobsOJZsKLG8K6",
         type: "personal",
         techsUsed: [siFlutter, siDart, siMyanimelist],
+    },
+    {
+        name: "JP Counter",
+        description:
+            "A simple CLI tracker I use to count correct/wrong answers when studying vocabulary. Keeps data in an SQLite database and automatically syncs to its GitHub repository.",
+        thumbnail: {
+            forDark: "/jp-counter.png",
+        },
+        sourceCodeUrl:
+            "https://jrpdango.github.io/gittop/display?repo=jp-counter&owner=jrpdango&token=w5dGwrnCocO7wpzDusO1KWYbegPDjMKaFwHCnCIxw5LDsAAPw41VwoTCpABfw6jDixDCv3LDmwpWwpE_EFzChcKXWRTCpcOvBsKow65la8OUwoHDqjgNw7YkaDfCl8Kow5XCoMONQkDCi2vCuz8ZbcK2L8OCwoNQCjbCnT9GLmrCg8KVVcKoP3XDgGNXwpRWGwXCncOKdTE-w6zDgMKywpnDpkDDucOawovCocKfwr_Dh8KgAWQ",
+        type: "personal",
+        techsUsed: [siRust, siGnubash, siSqlite, siUbuntu],
     },
     {
         name: "Page Summarizer",
