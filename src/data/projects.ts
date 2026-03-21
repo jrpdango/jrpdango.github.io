@@ -39,8 +39,16 @@ const projects: Project[] = [
         },
         hasBlurredBackground: false,
         urls: [
-            { href: "https://github.com/jrpdango/gittop", label: "Source Code", icon: Code },
-            { href: "https://jrpdango.github.io/gittop/display?repo=gittop-demo&owner=jrpdango&token=QMO_wqrCr3YuZXXDsGxQKwfCrsOhwozCl8OSw6Z3wo3CisKCwqbDvMO4KjvDtRDDu8KHwo_CvcKTw7XCv1LDusOjw7REZWvDrsOQLcOZwpJdw6tWRxIVw5EKw6nDmiYjwpXDrsOcw7nCkCnCncOmwrB9w7DCuMKpw4LCoALCtUDCk8ODFMO_WyTCuMOFXnfDlWdIw73Dg8K2CsOxQFfCvmPCq8KIw7rCtFlSw4cGGMKhwqjDk0pKwopCVh8SdA", label: "Live Demo", icon: Play },
+            {
+                href: "https://github.com/jrpdango/gittop",
+                label: "View Source Code",
+                icon: Code,
+            },
+            {
+                href: "https://jrpdango.github.io/gittop/display?repo=gittop-demo&owner=jrpdango&token=QMO_wqrCr3YuZXXDsGxQKwfCrsOhwozCl8OSw6Z3wo3CisKCwqbDvMO4KjvDtRDDu8KHwo_CvcKTw7XCv1LDusOjw7REZWvDrsOQLcOZwpJdw6tWRxIVw5EKw6nDmiYjwpXDrsOcw7nCkCnCncOmwrB9w7DCuMKpw4LCoALCtUDCk8ODFMO_WyTCuMOFXnfDlWdIw73Dg8K2CsOxQFfCvmPCq8KIw7rCtFlSw4cGGMKhwqjDk0pKwopCVh8SdA",
+                label: "Try Live Demo",
+                icon: Play,
+            },
         ],
         type: "personal",
         techsUsed: [siReact, siNodedotjs],
@@ -53,7 +61,11 @@ const projects: Project[] = [
             forDark: "/miru.png",
         },
         urls: [
-            { href: "https://jrpdango.github.io/gittop/display?repo=miru&owner=jrpdango&token=wqNgw6lHVsOmRGHDmMO2E2osdH9RwrgPNwPDulAxVsOdfkpyY8K9bMKRwr4mwo0FL1rCoMO5w5pkY8OZGMOfw4QwMytMwqZTw5XDk8O5BhfDu1rDkX7DtS_CkMOew4UGwr1gcgTChmIdTcKGwqsOdSY8wrEaw5PCrkUJw7zCjmwEw7_Cj2fClMKDwqY2LDXDmFQrT37CiH1sw7YXf8OsacOobsOJZsKLG8K6", label: "Source Code", icon: Code },
+            {
+                href: "https://jrpdango.github.io/gittop/display?repo=miru&owner=jrpdango&token=wqNgw6lHVsOmRGHDmMO2E2osdH9RwrgPNwPDulAxVsOdfkpyY8K9bMKRwr4mwo0FL1rCoMO5w5pkY8OZGMOfw4QwMytMwqZTw5XDk8O5BhfDu1rDkX7DtS_CkMOew4UGwr1gcgTChmIdTcKGwqsOdSY8wrEaw5PCrkUJw7zCjmwEw7_Cj2fClMKDwqY2LDXDmFQrT37CiH1sw7YXf8OsacOobsOJZsKLG8K6",
+                label: "View Source Code",
+                icon: Code,
+            },
         ],
         type: "personal",
         techsUsed: [siFlutter, siDart, siMyanimelist],
@@ -66,7 +78,11 @@ const projects: Project[] = [
             forDark: "/jp-counter.png",
         },
         urls: [
-            { href: "https://jrpdango.github.io/gittop/display?repo=jp-counter&owner=jrpdango&token=w5dGwrnCocO7wpzDusO1KWYbegPDjMKaFwHCnCIxw5LDsAAPw41VwoTCpABfw6jDixDCv3LDmwpWwpE_EFzChcKXWRTCpcOvBsKow65la8OUwoHDqjgNw7YkaDfCl8Kow5XCoMONQkDCi2vCuz8ZbcK2L8OCwoNQCjbCnT9GLmrCg8KVVcKoP3XDgGNXwpRWGwXCncOKdTE-w6zDgMKywpnDpkDDucOawovCocKfwr_Dh8KgAWQ", label: "Source Code", icon: Code },
+            {
+                href: "https://jrpdango.github.io/gittop/display?repo=jp-counter&owner=jrpdango&token=w5dGwrnCocO7wpzDusO1KWYbegPDjMKaFwHCnCIxw5LDsAAPw41VwoTCpABfw6jDixDCv3LDmwpWwpE_EFzChcKXWRTCpcOvBsKow65la8OUwoHDqjgNw7YkaDfCl8Kow5XCoMONQkDCi2vCuz8ZbcK2L8OCwoNQCjbCnT9GLmrCg8KVVcKoP3XDgGNXwpRWGwXCncOKdTE-w6zDgMKywpnDpkDDucOawovCocKfwr_Dh8KgAWQ",
+                label: "View Source Code",
+                icon: Code,
+            },
         ],
         type: "personal",
         techsUsed: [siRust, siGnubash, siSqlite, siUbuntu],
@@ -79,7 +95,11 @@ const projects: Project[] = [
             forDark: "/page-summarizer.png",
         },
         urls: [
-            { href: "https://github.com/jrpdango/page-summarizer/tree/main", label: "Source Code", icon: Code },
+            {
+                href: "https://github.com/jrpdango/page-summarizer/tree/main",
+                label: "View Source Code",
+                icon: Code,
+            },
         ],
         type: "personal",
         techsUsed: [siNodedotjs, siExpress, siSqlite, siPuppeteer, siJest],
@@ -94,7 +114,11 @@ const projects: Project[] = [
         type: "professional",
         techsUsed: [siNodedotjs, siReact, siExpress, siPostgresql, siSupabase],
         urls: [
-            { href: "https://wecourts.com/", label: "Visit Site", icon: Internet },
+            {
+                href: "https://wecourts.com/",
+                label: "Visit Site",
+                icon: Internet,
+            },
         ],
     },
     {
@@ -108,7 +132,11 @@ const projects: Project[] = [
         type: "professional",
         techsUsed: [siTypescript, siPhp],
         urls: [
-            { href: "https://midipd.com/", label: "Visit Site", icon: Internet },
+            {
+                href: "https://midipd.com/",
+                label: "Visit Site",
+                icon: Internet,
+            },
         ],
     },
     {
@@ -122,8 +150,16 @@ const projects: Project[] = [
         type: "professional",
         techsUsed: [siAndroid, siIos, siKotlin, siSwift, siFirebase],
         urls: [
-            { href: "https://play.google.com/store/apps/details?id=com.docayn.app", label: "Play Store", svgPath: siGoogleplay.path },
-            { href: "https://apps.apple.com/ph/app/doc-ayn/id6472990989", label: "App Store", svgPath: siAppstore.path },
+            {
+                href: "https://play.google.com/store/apps/details?id=com.docayn.app",
+                label: "Open in Play Store",
+                svgPath: siGoogleplay.path,
+            },
+            {
+                href: "https://apps.apple.com/ph/app/doc-ayn/id6472990989",
+                label: "Open in App Store",
+                svgPath: siAppstore.path,
+            },
         ],
     },
     {
@@ -137,7 +173,11 @@ const projects: Project[] = [
         type: "professional",
         techsUsed: [siVuedotjs, siNestjs],
         urls: [
-            { href: "https://attictours.asia", label: "Company Site", icon: Internet },
+            {
+                href: "https://attictours.asia",
+                label: "Visit Company Site",
+                icon: Internet,
+            },
         ],
     },
 ];
