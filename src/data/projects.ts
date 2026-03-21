@@ -56,7 +56,7 @@ const projects: Project[] = [
     {
         name: "JP Counter",
         description:
-            "A simple CLI tracker I use to count correct/wrong answers when studying vocabulary. Keeps data in an SQLite database and automatically syncs to its GitHub repository.",
+            "A simple CLI tracker I use to count correct/wrong answers when I'm studying vocabulary for languages. Keeps data in an SQLite database and automatically syncs to its GitHub repository.",
         thumbnail: {
             forDark: "/jp-counter.png",
         },
@@ -68,20 +68,13 @@ const projects: Project[] = [
     {
         name: "Page Summarizer",
         description:
-            "A proof of concept backend app for summarizing a page with AI. Contains an explanation and reasoning of tech used.",
+            "A proof of concept backend app for summarizing a page with AI.",
         thumbnail: {
             forDark: "/page-summarizer.png",
         },
         sourceCodeUrl: "https://github.com/jrpdango/page-summarizer/tree/main",
         type: "personal",
-        techsUsed: [
-            siVuedotjs,
-            siNodedotjs,
-            siExpress,
-            siSqlite,
-            siPuppeteer,
-            siJest,
-        ],
+        techsUsed: [siNodedotjs, siExpress, siSqlite, siPuppeteer, siJest],
     },
     {
         name: "WeCourts",
