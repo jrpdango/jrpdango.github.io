@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ThemedImage from "./ThemedImage.vue";
-import { ThemedImageSource, SimpleIcon } from "../types";
+import IconLinkButton from "./IconLinkButton.vue";
+import { ThemedImageSource, SimpleIcon, UrlConfig } from "../types";
 import { computed } from "vue";
 import { Code, Play, Internet } from "@iconoir/vue";
 import { siGoogleplay, siAppstore } from "simple-icons";
@@ -21,21 +22,6 @@ const props = defineProps<{
 
 const showBlur = computed(() => props.hasBlurredBackground !== false);
 
-type UrlPropKey =
-    | "sourceCodeUrl"
-    | "demoUrl"
-    | "liveSiteUrl"
-    | "companySiteUrl"
-    | "playStoreUrl"
-    | "appStoreUrl";
-
-type UrlConfig = {
-    prop: UrlPropKey;
-    label: string;
-    icon?: object;
-    svgPath?: string;
-};
-
 const urlConfigs: UrlConfig[] = [
     { prop: "sourceCodeUrl", label: "Source Code", icon: Code },
     { prop: "demoUrl", label: "Live Demo", icon: Play },
@@ -50,7 +36,7 @@ const urls = computed(() =>
         .filter(({ prop }) => props[prop])
         .map(({ prop, label, icon, svgPath }) => ({
             label,
-            href: props[prop],
+            href: props[prop] as string,
             icon,
             svgPath,
         })),
@@ -75,30 +61,14 @@ const urls = computed(() =>
         <div class="card-body">
             <h2 class="project-name">{{ name }}</h2>
             <div class="urls">
-                <template v-for="url in urls" :key="url.href">
-                    <div class="project-url">
-                        <a :href="url.href" target="_blank">
-                            <button>
-                                <component
-                                    v-if="url.icon"
-                                    :is="url.icon"
-                                    :height="20"
-                                    :width="20"
-                                />
-                                <svg
-                                    v-else
-                                    viewBox="0 0 24 24"
-                                    :height="20"
-                                    :width="20"
-                                    fill="currentColor"
-                                >
-                                    <path :d="url.svgPath" />
-                                </svg>
-                                {{ url.label }}
-                            </button>
-                        </a>
-                    </div>
-                </template>
+                <IconLinkButton
+                    v-for="url in urls"
+                    :key="url.href"
+                    :href="url.href"
+                    :label="url.label"
+                    :icon="url.icon"
+                    :svgPath="url.svgPath"
+                />
             </div>
             <p class="project-description">{{ description }}</p>
             <div class="tech-list">
@@ -180,38 +150,9 @@ const urls = computed(() =>
 .urls {
     display: flex;
     align-items: center;
+    gap: 8px;
     min-height: 36px;
     margin-bottom: 4px;
-}
-
-.project-url {
-    display: flex;
-    align-items: center;
-    padding-right: 8px;
-}
-
-.project-url a {
-    text-decoration: none;
-}
-
-.project-url button {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    background-color: var(--card-body-bg);
-    color: var(--color);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition:
-        background-color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.project-url button:hover {
-    background-color: var(--tech-badge-bg);
 }
 
 .tech-list {
@@ -239,10 +180,6 @@ const urls = computed(() =>
     .urls {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .project-url:not(:first-child) {
-        padding-top: 8px;
     }
 }
 </style>

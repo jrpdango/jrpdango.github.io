@@ -1,4 +1,5 @@
 import type { SimpleIcon } from "simple-icons";
+import type { Component } from "vue";
 
 type ThemedImageSource = {
     forDark: string;
@@ -20,4 +21,13 @@ type Project = {
     techsUsed?: SimpleIcon[];
 };
 
-export type { ThemedImageSource, Project, SimpleIcon };
+type UrlPropKey = Extract<keyof Project, `${string}Url`>;
+
+type UrlConfig = {
+    prop: UrlPropKey;
+    label: string;
+    icon?: Component;
+    svgPath?: string;
+};
+
+export type { ThemedImageSource, Project, SimpleIcon, UrlPropKey, UrlConfig };
