@@ -22,6 +22,8 @@ import {
     siKotlin,
     siSwift,
     siFirebase,
+    siPostgresql,
+    siSupabase,
 } from "simple-icons";
 import { Project } from "../types";
 
@@ -85,6 +87,24 @@ const projects: Project[] = [
             siPuppeteer,
             siJest,
         ],
+    },
+    {
+        name: "WeCourts",
+        description:
+            "A rating system and global hub for padel players, tournaments, clubs, and more.",
+        thumbnail: {
+            forDark: "/wecourts.png",
+        },
+        type: "professional",
+        techsUsed: [
+            siTypescript,
+            siNodedotjs,
+            siReact,
+            siExpress,
+            siPostgresql,
+            siSupabase,
+        ],
+        liveSiteUrl: "https://wecourts.com/",
     },
     {
         name: "MIDI",
