@@ -1,9 +1,6 @@
 import {
     siReact,
     siNodedotjs,
-    siJavascript,
-    siHtml5,
-    siCss,
     siRust,
     siGnubash,
     siSqlite,
@@ -42,7 +39,7 @@ const projects: Project[] = [
         demoUrl:
             "https://jrpdango.github.io/gittop/display?repo=gittop-demo&owner=jrpdango&token=QMO_wqrCr3YuZXXDsGxQKwfCrsOhwozCl8OSw6Z3wo3CisKCwqbDvMO4KjvDtRDDu8KHwo_CvcKTw7XCv1LDusOjw7REZWvDrsOQLcOZwpJdw6tWRxIVw5EKw6nDmiYjwpXDrsOcw7nCkCnCncOmwrB9w7DCuMKpw4LCoALCtUDCk8ODFMO_WyTCuMOFXnfDlWdIw73Dg8K2CsOxQFfCvmPCq8KIw7rCtFlSw4cGGMKhwqjDk0pKwopCVh8SdA",
         type: "personal",
-        techsUsed: [siReact, siNodedotjs, siJavascript, siHtml5, siCss],
+        techsUsed: [siReact, siNodedotjs],
     },
     {
         name: "JP Counter",
@@ -80,9 +77,6 @@ const projects: Project[] = [
         techsUsed: [
             siVuedotjs,
             siNodedotjs,
-            siJavascript,
-            siHtml5,
-            siCss,
             siExpress,
             siSqlite,
             siPuppeteer,
@@ -97,14 +91,7 @@ const projects: Project[] = [
             forDark: "/wecourts.png",
         },
         type: "professional",
-        techsUsed: [
-            siTypescript,
-            siNodedotjs,
-            siReact,
-            siExpress,
-            siPostgresql,
-            siSupabase,
-        ],
+        techsUsed: [siNodedotjs, siReact, siExpress, siPostgresql, siSupabase],
         liveSiteUrl: "https://wecourts.com/",
     },
     {
@@ -141,7 +128,7 @@ const projects: Project[] = [
         },
         hasBlurredBackground: false,
         type: "professional",
-        techsUsed: [siTypescript, siNestjs],
+        techsUsed: [siVuedotjs, siNestjs],
         companySiteUrl: "https://attictours.asia",
     },
 ];
