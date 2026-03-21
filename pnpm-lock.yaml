@@ -8,12 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@iconoir/vue':
+        specifier: ^7.11.0
+        version: 7.11.0(vue@3.5.30(typescript@5.9.3))
       '@types/node':
         specifier: ^20.14.10
         version: 20.19.37
-      iconoir-react:
-        specifier: ^7.11.0
-        version: 7.11.0(react@19.2.4)
       simple-icons:
         specifier: ^16.12.0
         version: 16.12.0
@@ -193,6 +193,11 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@iconoir/vue@7.11.0':
+    resolution: {integrity: sha512-o768Cu9nayRcxryYElKmfRLBOfY26xVKB4T8z+ppJnEWy2QiDLIs8NJVc53HGvTsrfn7JC7+uu32ZUdFpx4m6A==}
+    peerDependencies:
+      vue: '3'
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -420,11 +425,6 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  iconoir-react@7.11.0:
-    resolution: {integrity: sha512-uvTKtnHYwbbTsmQ6HCcliYd50WK0GbjP497RwdISxKzfS01x4cK1Mn/F2mT/t2roSaJQ0I+KnHxMcyvmNMXWsQ==}
-    peerDependencies:
-      react: 18 || 19
-
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
@@ -454,10 +454,6 @@ packages:
     resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
     engines: {node: '>=14'}
     hasBin: true
-
-  react@19.2.4:
-    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
-    engines: {node: '>=0.10.0'}
 
   rollup@4.59.0:
     resolution: {integrity: sha512-2oMpl67a3zCH9H79LeMcbDhXW/UmWG/y2zuqnF2jQq5uq9TbM9TVyXvA4+t+ne2IIkBdrLpAaRQAvo7YI/Yyeg==}
@@ -611,6 +607,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@iconoir/vue@7.11.0(vue@3.5.30(typescript@5.9.3))':
+    dependencies:
+      vue: 3.5.30(typescript@5.9.3)
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
@@ -831,10 +831,6 @@ snapshots:
 
   he@1.2.0: {}
 
-  iconoir-react@7.11.0(react@19.2.4):
-    dependencies:
-      react: 19.2.4
-
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -858,8 +854,6 @@ snapshots:
       source-map-js: 1.2.1
 
   prettier@3.8.1: {}
-
-  react@19.2.4: {}
 
   rollup@4.59.0:
     dependencies:
