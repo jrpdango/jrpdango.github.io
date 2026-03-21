@@ -1,46 +1,19 @@
 <script setup lang="ts">
 import ThemedImage from "./ThemedImage.vue";
 import IconLinkButton from "./IconLinkButton.vue";
-import { ThemedImageSource, SimpleIcon, UrlConfig } from "../types";
+import { ThemedImageSource, ProjectUrl, SimpleIcon } from "../types";
 import { computed } from "vue";
-import { Code, Play, Internet } from "@iconoir/vue";
-import { siGoogleplay, siAppstore } from "simple-icons";
 
 const props = defineProps<{
     name: string;
     description: string;
     thumbnail: ThemedImageSource;
     hasBlurredBackground?: boolean;
-    sourceCodeUrl?: string;
-    demoUrl?: string;
-    liveSiteUrl?: string;
-    companySiteUrl?: string;
-    playStoreUrl?: string;
-    appStoreUrl?: string;
+    urls?: ProjectUrl[];
     techsUsed?: SimpleIcon[];
 }>();
 
 const showBlur = computed(() => props.hasBlurredBackground !== false);
-
-const urlConfigs: UrlConfig[] = [
-    { prop: "sourceCodeUrl", label: "Source Code", icon: Code },
-    { prop: "demoUrl", label: "Live Demo", icon: Play },
-    { prop: "liveSiteUrl", label: "Visit Site", icon: Internet },
-    { prop: "companySiteUrl", label: "Company Site", icon: Internet },
-    { prop: "playStoreUrl", label: "Play Store", svgPath: siGoogleplay.path },
-    { prop: "appStoreUrl", label: "App Store", svgPath: siAppstore.path },
-];
-
-const urls = computed(() =>
-    urlConfigs
-        .filter(({ prop }) => props[prop])
-        .map(({ prop, label, icon, svgPath }) => ({
-            label,
-            href: props[prop] as string,
-            icon,
-            svgPath,
-        })),
-);
 </script>
 
 <template>
@@ -62,7 +35,7 @@ const urls = computed(() =>
             <h2 class="project-name">{{ name }}</h2>
             <div class="urls">
                 <IconLinkButton
-                    v-for="url in urls"
+                    v-for="url in urls ?? []"
                     :key="url.href"
                     :href="url.href"
                     :label="url.label"

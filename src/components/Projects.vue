@@ -17,12 +17,7 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                         :description="project.description"
                         :thumbnail="project.thumbnail"
                         :has-blurred-background="project.hasBlurredBackground"
-                        :source-code-url="project.sourceCodeUrl"
-                        :demo-url="project.demoUrl"
-                        :live-site-url="project.liveSiteUrl"
-                        :company-site-url="project.companySiteUrl"
-                        :play-store-url="project.playStoreUrl"
-                        :app-store-url="project.appStoreUrl"
+                        :urls="project.urls"
                         :techs-used="project.techsUsed"
                     />
                 </div>
@@ -37,11 +32,7 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                     :description="project.description"
                     :thumbnail="project.thumbnail"
                     :has-blurred-background="project.hasBlurredBackground"
-                    :source-code-url="project.sourceCodeUrl"
-                    :demo-url="project.demoUrl"
-                    :live-site-url="project.liveSiteUrl"
-                    :play-store-url="project.playStoreUrl"
-                    :app-store-url="project.appStoreUrl"
+                    :urls="project.urls"
                     :techs-used="project.techsUsed"
                 />
             </div>
