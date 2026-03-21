@@ -24,6 +24,8 @@ import {
     siNestjs,
     siGoogleplay,
     siAppstore,
+    siMongodb,
+    siWordpress,
 } from "simple-icons";
 import { Code, Play, Internet } from "@iconoir/vue";
 import { Project } from "../types";
@@ -130,7 +132,7 @@ const projects: Project[] = [
         },
         hasBlurredBackground: false,
         type: "professional",
-        techsUsed: [siTypescript, siPhp],
+        techsUsed: [siTypescript, siPhp, siWordpress],
         urls: [
             {
                 href: "https://midipd.com/",
@@ -171,7 +173,7 @@ const projects: Project[] = [
         },
         hasBlurredBackground: false,
         type: "professional",
-        techsUsed: [siVuedotjs, siNestjs],
+        techsUsed: [siVuedotjs, siNestjs, siMongodb],
         urls: [
             {
                 href: "https://attictours.asia",
