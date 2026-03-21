@@ -3,6 +3,7 @@ import ThemedImage from "./ThemedImage.vue";
 import { ThemedImageSource, SimpleIcon } from "../types";
 import { computed } from "vue";
 import { Code, Play, Internet } from "@iconoir/vue";
+import { siGoogleplay, siAppstore } from "simple-icons";
 
 const props = defineProps<{
     name: string;
@@ -13,22 +14,46 @@ const props = defineProps<{
     demoUrl?: string;
     liveSiteUrl?: string;
     companySiteUrl?: string;
+    playStoreUrl?: string;
+    appStoreUrl?: string;
     techsUsed?: SimpleIcon[];
 }>();
 
 const showBlur = computed(() => props.hasBlurredBackground !== false);
 
-const urlConfigs = [
+type UrlPropKey =
+    | "sourceCodeUrl"
+    | "demoUrl"
+    | "liveSiteUrl"
+    | "companySiteUrl"
+    | "playStoreUrl"
+    | "appStoreUrl";
+
+type UrlConfig = {
+    prop: UrlPropKey;
+    label: string;
+    icon?: object;
+    svgPath?: string;
+};
+
+const urlConfigs: UrlConfig[] = [
     { prop: "sourceCodeUrl", label: "Source Code", icon: Code },
     { prop: "demoUrl", label: "Live Demo", icon: Play },
     { prop: "liveSiteUrl", label: "Visit Site", icon: Internet },
     { prop: "companySiteUrl", label: "Company Site", icon: Internet },
-] as const;
+    { prop: "playStoreUrl", label: "Play Store", svgPath: siGoogleplay.path },
+    { prop: "appStoreUrl", label: "App Store", svgPath: siAppstore.path },
+];
 
 const urls = computed(() =>
     urlConfigs
         .filter(({ prop }) => props[prop])
-        .map(({ prop, label, icon }) => ({ label, href: props[prop], icon })),
+        .map(({ prop, label, icon, svgPath }) => ({
+            label,
+            href: props[prop],
+            icon,
+            svgPath,
+        })),
 );
 </script>
 
@@ -55,10 +80,20 @@ const urls = computed(() =>
                         <a :href="url.href" target="_blank">
                             <button>
                                 <component
+                                    v-if="url.icon"
                                     :is="url.icon"
                                     :height="20"
                                     :width="20"
                                 />
+                                <svg
+                                    v-else
+                                    viewBox="0 0 24 24"
+                                    :height="20"
+                                    :width="20"
+                                    fill="currentColor"
+                                >
+                                    <path :d="url.svgPath" />
+                                </svg>
                                 {{ url.label }}
                             </button>
                         </a>

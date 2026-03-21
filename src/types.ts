@@ -14,6 +14,8 @@ type Project = {
     demoUrl?: string;
     liveSiteUrl?: string;
     companySiteUrl?: string;
+    playStoreUrl?: string;
+    appStoreUrl?: string;
     type: "professional" | "personal";
     techsUsed?: SimpleIcon[];
 };

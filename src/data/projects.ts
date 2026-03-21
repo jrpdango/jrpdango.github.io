@@ -109,8 +109,9 @@ const projects: Project[] = [
         hasBlurredBackground: false,
         type: "professional",
         techsUsed: [siAndroid, siIos, siKotlin, siSwift, siFirebase],
-        liveSiteUrl:
+        playStoreUrl:
             "https://play.google.com/store/apps/details?id=com.docayn.app",
+        appStoreUrl: "https://apps.apple.com/ph/app/doc-ayn/id6472990989",
     },
     {
         name: "Attic Tours",

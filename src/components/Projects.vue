@@ -21,6 +21,8 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                         :demo-url="project.demoUrl"
                         :live-site-url="project.liveSiteUrl"
                         :company-site-url="project.companySiteUrl"
+                        :play-store-url="project.playStoreUrl"
+                        :app-store-url="project.appStoreUrl"
                         :techs-used="project.techsUsed"
                     />
                 </div>
@@ -38,6 +40,8 @@ const personalProjects = projects.filter((p) => p.type === "personal");
                     :source-code-url="project.sourceCodeUrl"
                     :demo-url="project.demoUrl"
                     :live-site-url="project.liveSiteUrl"
+                    :play-store-url="project.playStoreUrl"
+                    :app-store-url="project.appStoreUrl"
                     :techs-used="project.techsUsed"
                 />
             </div>
