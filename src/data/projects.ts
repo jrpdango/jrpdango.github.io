@@ -24,6 +24,7 @@ import {
     siFirebase,
     siPostgresql,
     siSupabase,
+    siNestjs,
 } from "simple-icons";
 import { Project } from "../types";
 
@@ -113,6 +114,7 @@ const projects: Project[] = [
         thumbnail: {
             forDark: "/midi.png",
         },
+        hasBlurredBackground: false,
         type: "professional",
         techsUsed: [siTypescript, siPhp],
         liveSiteUrl: "https://midipd.com/",
@@ -129,6 +131,17 @@ const projects: Project[] = [
         techsUsed: [siAndroid, siIos, siKotlin, siSwift, siFirebase],
         liveSiteUrl:
             "https://play.google.com/store/apps/details?id=com.docayn.app",
+    },
+    {
+        name: "Attic Tours",
+        description:
+            "An admin dashboard system for managing internal users, branches, and customers' Japan and Korea visa applications.",
+        thumbnail: {
+            forDark: "/attictours.png",
+        },
+        hasBlurredBackground: false,
+        type: "professional",
+        techsUsed: [siTypescript, siNestjs],
     },
 ];
 
