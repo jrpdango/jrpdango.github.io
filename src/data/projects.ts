@@ -26,6 +26,7 @@ import {
     siAppstore,
     siMongodb,
     siWordpress,
+    siTauri,
 } from "simple-icons";
 import { Code, Play, Internet } from "@iconoir/vue";
 import { Project } from "../types";
@@ -54,6 +55,24 @@ const projects: Project[] = [
         ],
         type: "personal",
         techsUsed: [siReact, siNodedotjs],
+    },
+    {
+        name: "HumbleResume",
+        description:
+            "A simple Markdown-based resume builder with real-time previews and PDF export support.",
+        thumbnail: {
+            forDark: "/humbleresume.png",
+        },
+        hasBlurredBackground: true,
+        urls: [
+            {
+                href: "https://github.com/jrpdango/humbleresume",
+                label: "View Source Code",
+                icon: Code,
+            },
+        ],
+        type: "personal",
+        techsUsed: [siVuedotjs, siTauri],
     },
     {
         name: "miru",
