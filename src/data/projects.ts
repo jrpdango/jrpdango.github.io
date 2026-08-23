@@ -27,6 +27,7 @@ import {
     siMongodb,
     siWordpress,
     siTauri,
+    siNuxt,
 } from "simple-icons";
 import { Code, Play, Internet } from "@iconoir/vue";
 import { Project } from "../types";
@@ -137,6 +138,24 @@ const projects: Project[] = [
         urls: [
             {
                 href: "https://wecourts.com/",
+                label: "Visit Site",
+                icon: Internet,
+            },
+        ],
+    },
+    {
+        name: "Orbalux",
+        description:
+            "A cloud-native SaaS platform for real-time environmental and operational data monitoring, built for offshore, marine, and industrial operators.",
+        thumbnail: {
+            forDark: "/orbalux.png",
+        },
+        hasBlurredBackground: false,
+        type: "professional",
+        techsUsed: [siVuedotjs, siTypescript, siNuxt],
+        urls: [
+            {
+                href: "https://orbalux.com/",
                 label: "Visit Site",
                 icon: Internet,
             },
