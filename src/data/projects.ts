@@ -129,7 +129,7 @@ const projects: Project[] = [
     {
         name: "WeCourts",
         description:
-            "A rating system and global hub for padel players, tournaments, clubs, and more.",
+            "A padel tournament platform featuring the WPPR player rating system, with global tournament discovery, registration, scheduling, and more.",
         thumbnail: {
             forDark: "/wecourts.png",
         },
@@ -146,7 +146,7 @@ const projects: Project[] = [
     {
         name: "Orbalux",
         description:
-            "A cloud-native SaaS platform for real-time environmental and operational data monitoring, built for offshore, marine, and industrial operators.",
+            "A cloud-native SaaS platform for real-time environmental and operational data monitoring, built for offshore and industrial environments.",
         thumbnail: {
             forDark: "/orbalux.png",
         },
@@ -164,7 +164,7 @@ const projects: Project[] = [
     {
         name: "MIDI",
         description:
-            "A website for MIDI, a medical & life science development company.",
+            "A medical and life science product development company covering the full product lifecycle, from research and design through engineering and commercialization.",
         thumbnail: {
             forDark: "/midi.png",
         },
@@ -182,7 +182,7 @@ const projects: Project[] = [
     {
         name: "Doc Ayn",
         description:
-            "A women's health mobile app that helps book OB-GYN appointments, as well as monitor periods, pregnancies, and medications.",
+            "A women's health mobile app that helps book OB-GYN appointments and monitor periods and pregnancy, with medication reminders.",
         thumbnail: {
             forDark: "/docayn.png",
         },
@@ -205,7 +205,7 @@ const projects: Project[] = [
     {
         name: "Attic Tours",
         description:
-            "An admin dashboard system for managing internal users, branches, and customers' Japan and Korea visa applications.",
+            "An admin dashboard for managing a travel agency's internal users and branches, plus customers' Japan and Korea visa applications.",
         thumbnail: {
             forDark: "/attictours.png",
         },
