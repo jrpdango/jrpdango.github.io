@@ -33,6 +33,8 @@ import { Code, Play, Internet } from "@iconoir/vue";
 import { Project } from "../types";
 import attictoursThumbnail from "../assets/projects/attictours.webp";
 import docaynThumbnail from "../assets/projects/docayn.webp";
+import gittopThumbnail from "../assets/projects/gittop-full.webp";
+import gittopTransparentThumbnail from "../assets/projects/gittop-full-transparent.webp";
 import humbleresumeThumbnail from "../assets/projects/humbleresume.webp";
 import jpCounterThumbnail from "../assets/projects/jp-counter.webp";
 import midiThumbnail from "../assets/projects/midi.webp";
@@ -47,8 +49,8 @@ const projects: Project[] = [
         description:
             "An open-source tool for sharing private repository contents without having to make the repo itself public.",
         thumbnail: {
-            forLight: "/gittop-full.webp",
-            forDark: "/gittop-full-transparent.webp",
+            forLight: gittopThumbnail,
+            forDark: gittopTransparentThumbnail,
         },
         hasBlurredBackground: false,
         urls: [
