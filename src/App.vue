@@ -27,7 +27,9 @@ document.documentElement.setAttribute("data-theme", theme.state);
 @media (max-width: 768px) {
     .main-content {
         margin-left: 0;
-        padding-bottom: var(--bottombar-height);
+        padding-bottom: calc(
+            var(--bottombar-height) + env(safe-area-inset-bottom, 0px)
+        );
     }
 }
 </style>

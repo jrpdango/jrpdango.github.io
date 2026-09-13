@@ -31,7 +31,7 @@ function toggleTheme() {
             aria-label="GitHub"
             class="bar-link"
         >
-            <img :src="githubIcon" alt="GitHub" height="26" width="26" />
+            <img :src="githubIcon" alt="GitHub" height="28" width="28" />
         </a>
         <a
             href="https://www.linkedin.com/in/jasper-pigason-566148177/"
@@ -39,21 +39,21 @@ function toggleTheme() {
             aria-label="LinkedIn"
             class="bar-link"
         >
-            <img :src="linkedinIcon" alt="LinkedIn" height="26" width="26" />
+            <img :src="linkedinIcon" alt="LinkedIn" height="28" width="28" />
         </a>
         <a
             href="mailto:jrpigason@gmail.com"
             aria-label="Email"
             class="bar-link"
         >
-            <img :src="emailIcon" alt="Email" height="26" width="26" />
+            <img :src="emailIcon" alt="Email" height="28" width="28" />
         </a>
         <button
             class="bar-link theme-toggle"
             @click="toggleTheme"
             :aria-label="themeLabel"
         >
-            <img :src="themeIcon" alt="Toggle theme" height="26" width="26" />
+            <img :src="themeIcon" alt="Toggle theme" height="28" width="28" />
         </button>
     </nav>
 </template>
@@ -70,8 +70,10 @@ function toggleTheme() {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    padding-left: env(safe-area-inset-left, 0px);
     border-right: 1px solid var(--border-color);
-    background-color: var(--bg-color);
+    background-color: var(--bar-bg);
+    box-shadow: 2px 0 16px var(--bar-shadow-color);
     z-index: 100;
 }
 
@@ -79,15 +81,25 @@ function toggleTheme() {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.7;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    opacity: 0.85;
     transition:
         opacity 0.2s ease-in-out,
-        transform 0.2s ease-in-out;
+        transform 0.2s ease-in-out,
+        background-color 0.2s ease-in-out;
 }
 
 .bar-link:hover {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.08);
+    background-color: var(--tech-badge-bg);
+}
+
+.bar-link:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .theme-toggle {
@@ -103,13 +115,19 @@ function toggleTheme() {
         top: auto;
         bottom: 0;
         left: 0;
-        height: var(--bottombar-height);
+        height: calc(
+            var(--bottombar-height) + env(safe-area-inset-bottom, 0px)
+        );
         width: 100%;
         flex-direction: row;
         justify-content: center;
         gap: 2rem;
+        padding-left: env(safe-area-inset-left, 0px);
+        padding-right: env(safe-area-inset-right, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
         border-right: none;
         border-top: 1px solid var(--border-color);
+        box-shadow: 0 -2px 16px var(--bar-shadow-color);
     }
 }
 </style>
