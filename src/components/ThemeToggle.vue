@@ -4,69 +4,121 @@ import moon from "@/assets/icons/crescent-moon.svg";
 import sun from "@/assets/icons/sun.svg";
 import { Theme, theme } from "../theme";
 
+const isDark = computed({
+    get: () => theme.state === Theme.DARK,
+    set: (dark: boolean) => {
+        const next = dark ? Theme.DARK : Theme.LIGHT;
+        document.documentElement.setAttribute("data-theme", next);
+        theme.state = next;
+    },
+});
+
 const themeIcon = computed(() => (theme.state === Theme.DARK ? moon : sun));
 const themeLabel = computed(() =>
     theme.state === Theme.DARK ? "Switch to light mode" : "Switch to dark mode",
 );
-
-function toggleTheme() {
-    if (theme.state === Theme.DARK) {
-        document.documentElement.setAttribute("data-theme", "light");
-        theme.state = Theme.LIGHT;
-    } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        theme.state = Theme.DARK;
-    }
-}
 </script>
 
 <template>
-    <button class="theme-toggle" @click="toggleTheme" :aria-label="themeLabel">
-        <img :src="themeIcon" alt="Toggle theme" height="28" width="28" />
-    </button>
+    <label class="theme-switch">
+        <input
+            type="checkbox"
+            role="switch"
+            v-model="isDark"
+            :aria-label="themeLabel"
+        />
+        <span class="track">
+            <span class="knob">
+                <img :src="themeIcon" alt="" width="18" height="18" />
+            </span>
+        </span>
+    </label>
 </template>
 
 <style scoped>
-.theme-toggle {
+.theme-switch {
     position: fixed;
     top: 10px;
     right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: none;
-    border-radius: 999px;
-    background: none;
-    color: inherit;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
     cursor: pointer;
-    opacity: 0.85;
-    transition:
-        opacity 0.2s ease-in-out,
-        transform 0.2s ease-in-out,
-        background-color 0.2s ease-in-out;
     z-index: 101;
 }
 
-.theme-toggle:hover {
-    opacity: 1;
-    transform: scale(1.08);
-    background-color: var(--tech-badge-bg);
+.theme-switch input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
 }
 
-.theme-toggle:focus-visible {
+.track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 34px;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background-color: var(--tech-badge-bg);
+    border: 1px solid var(--border-color);
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px var(--bar-shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.knob img {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-switch:hover .track {
+    border-color: var(--accent-color);
+}
+
+.theme-switch input:focus-visible + .track {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 
+.theme-switch input:checked + .track .knob {
+    transform: translateX(26px);
+}
+
 @media (max-width: 768px) {
-    .theme-toggle {
+    .theme-switch {
         top: auto;
         right: 12px;
         bottom: env(safe-area-inset-bottom, 0px);
         height: var(--bottombar-height);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .track,
+    .knob {
+        transition: none;
     }
 }
 </style>
