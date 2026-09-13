@@ -1,8 +1,56 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from "vue";
+
+import south from "@/assets/electric-fan/south.webp";
+import southWest from "@/assets/electric-fan/south-west.webp";
+import west from "@/assets/electric-fan/west.webp";
+import northWest from "@/assets/electric-fan/north-west.webp";
+import north from "@/assets/electric-fan/north.webp";
+import northEast from "@/assets/electric-fan/north-east.webp";
+import east from "@/assets/electric-fan/east.webp";
+import southEast from "@/assets/electric-fan/south-east.webp";
+
+const frames = [
+    south,
+    southWest,
+    west,
+    northWest,
+    north,
+    northEast,
+    east,
+    southEast,
+];
+
+const frame = ref(0);
+let timer: number | undefined;
+
+onMounted(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    timer = window.setInterval(() => {
+        frame.value = (frame.value + 1) % frames.length;
+    }, 250);
+});
+
+onUnmounted(() => {
+    window.clearInterval(timer);
+});
+</script>
 
 <template>
     <div class="header">
-        <h1 class="my-name">Jasper Robert Pigason</h1>
+        <div class="name-row">
+            <h1 class="my-name">Jasper Robert Pigason</h1>
+            <img
+                class="fan"
+                :src="frames[frame]"
+                alt=""
+                width="40"
+                height="40"
+            />
+        </div>
         <p class="my-description">
             I'm a full stack developer who enjoys dabbling in a little bit of
             everything. <br />
@@ -17,8 +65,23 @@
     padding: var(--spacing-xl) var(--content-padding-x) var(--spacing-md);
 }
 
+.name-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.fan {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40px;
+    height: 40px;
+    image-rendering: pixelated;
+    flex: none;
+}
+
 .my-name {
-    margin: 0 0 8px;
+    margin: 0;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -34,6 +97,11 @@
     .header {
         padding: var(--spacing-md) var(--content-padding-x-mobile)
             var(--spacing-sm);
+    }
+
+    .fan {
+        width: 32px;
+        height: 32px;
     }
 
     .my-name {
