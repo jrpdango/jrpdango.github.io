@@ -20,19 +20,20 @@ const themeLabel = computed(() =>
 </script>
 
 <template>
-    <label class="theme-switch">
-        <input
-            type="checkbox"
-            role="switch"
-            v-model="isDark"
-            :aria-label="themeLabel"
-        />
+    <button
+        type="button"
+        role="switch"
+        class="theme-switch"
+        :aria-checked="isDark"
+        :aria-label="themeLabel"
+        @click="isDark = !isDark"
+    >
         <span class="track">
             <span class="knob">
                 <img :src="themeIcon" alt="" width="18" height="18" />
             </span>
         </span>
-    </label>
+    </button>
 </template>
 
 <style scoped>
@@ -43,18 +44,11 @@ const themeLabel = computed(() =>
     display: inline-block;
     width: 60px;
     height: 34px;
+    padding: 0;
+    border: none;
+    background: none;
     cursor: pointer;
     z-index: 101;
-}
-
-.theme-switch input {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
 }
 
 .track {
@@ -97,12 +91,12 @@ const themeLabel = computed(() =>
     border-color: var(--accent-color);
 }
 
-.theme-switch input:focus-visible + .track {
+.theme-switch:focus-visible .track {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 
-.theme-switch input:checked + .track .knob {
+.theme-switch[aria-checked="true"] .knob {
     transform: translateX(26px);
 }
 
