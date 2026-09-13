@@ -1,26 +1,7 @@
 <script setup lang="ts">
-import { computed } from "vue";
 import linkedinIcon from "@/assets/icons/linkedin-color.svg";
 import githubIcon from "@/assets/icons/github-color.svg";
 import emailIcon from "@/assets/icons/email.svg";
-import moon from "@/assets/icons/crescent-moon.svg";
-import sun from "@/assets/icons/sun.svg";
-import { Theme, theme } from "../theme";
-
-const themeIcon = computed(() => (theme.state === Theme.DARK ? moon : sun));
-const themeLabel = computed(() =>
-    theme.state === Theme.DARK ? "Switch to light mode" : "Switch to dark mode",
-);
-
-function toggleTheme() {
-    if (theme.state === Theme.DARK) {
-        document.documentElement.setAttribute("data-theme", "light");
-        theme.state = Theme.LIGHT;
-    } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        theme.state = Theme.DARK;
-    }
-}
 </script>
 
 <template>
@@ -48,13 +29,6 @@ function toggleTheme() {
         >
             <img :src="emailIcon" alt="Email" height="28" width="28" />
         </a>
-        <button
-            class="bar-link theme-toggle"
-            @click="toggleTheme"
-            :aria-label="themeLabel"
-        >
-            <img :src="themeIcon" alt="Toggle theme" height="28" width="28" />
-        </button>
     </nav>
 </template>
 
@@ -102,14 +76,6 @@ function toggleTheme() {
     outline-offset: 2px;
 }
 
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    color: inherit;
-}
-
 @media (max-width: 768px) {
     .social-bar {
         top: auto;
@@ -120,10 +86,10 @@ function toggleTheme() {
         );
         width: 100%;
         flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-        padding-left: env(safe-area-inset-left, 0px);
-        padding-right: env(safe-area-inset-right, 0px);
+        justify-content: flex-start;
+        gap: 1rem;
+        padding-left: calc(env(safe-area-inset-left, 0px) + 12px);
+        padding-right: calc(env(safe-area-inset-right, 0px) + 60px);
         padding-bottom: env(safe-area-inset-bottom, 0px);
         border-right: none;
         border-top: 1px solid var(--border-color);

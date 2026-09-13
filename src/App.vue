@@ -2,6 +2,7 @@
 import BaseHeader from "./components/BaseHeader.vue";
 import Projects from "./components/Projects.vue";
 import SocialBar from "./components/SocialBar.vue";
+import ThemeToggle from "./components/ThemeToggle.vue";
 import { Theme, theme } from "./theme";
 
 // Check preferred theme
@@ -13,6 +14,7 @@ document.documentElement.setAttribute("data-theme", theme.state);
 
 <template>
     <SocialBar />
+    <ThemeToggle />
     <div class="main-content">
         <BaseHeader />
         <Projects />
