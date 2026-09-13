@@ -31,6 +31,15 @@ import {
 } from "simple-icons";
 import { Code, Play, Internet } from "@iconoir/vue";
 import { Project } from "../types";
+import attictoursThumbnail from "../assets/projects/attictours.webp";
+import docaynThumbnail from "../assets/projects/docayn.webp";
+import humbleresumeThumbnail from "../assets/projects/humbleresume.webp";
+import jpCounterThumbnail from "../assets/projects/jp-counter.webp";
+import midiThumbnail from "../assets/projects/midi.webp";
+import miruThumbnail from "../assets/projects/miru.webp";
+import orbaluxThumbnail from "../assets/projects/orbalux.webp";
+import pageSummarizerThumbnail from "../assets/projects/page-summarizer.webp";
+import wecourtsThumbnail from "../assets/projects/wecourts.webp";
 
 const projects: Project[] = [
     {
@@ -38,8 +47,8 @@ const projects: Project[] = [
         description:
             "An open-source tool for sharing private repository contents without having to make the repo itself public.",
         thumbnail: {
-            forLight: "/gittop-full.png",
-            forDark: "/gittop-full-transparent.png",
+            forLight: "/gittop-full.webp",
+            forDark: "/gittop-full-transparent.webp",
         },
         hasBlurredBackground: false,
         urls: [
@@ -62,7 +71,7 @@ const projects: Project[] = [
         description:
             "A simple Markdown-based resume builder with real-time previews and PDF export support.",
         thumbnail: {
-            forDark: "/humbleresume.png",
+            forDark: humbleresumeThumbnail,
         },
         hasBlurredBackground: true,
         urls: [
@@ -80,7 +89,7 @@ const projects: Project[] = [
         description:
             "A mobile MyAnimeList client demo I made to easily access a list of shows I've watched or plan to watch.",
         thumbnail: {
-            forDark: "/miru.png",
+            forDark: miruThumbnail,
         },
         urls: [
             {
@@ -97,7 +106,7 @@ const projects: Project[] = [
         description:
             "A simple CLI tracker I use to count correct/wrong answers when I'm studying vocabulary for languages. Keeps data in an SQLite database and automatically syncs to its GitHub repository.",
         thumbnail: {
-            forDark: "/jp-counter.png",
+            forDark: jpCounterThumbnail,
         },
         urls: [
             {
@@ -114,7 +123,7 @@ const projects: Project[] = [
         description:
             "A proof of concept backend app for summarizing a page with AI.",
         thumbnail: {
-            forDark: "/page-summarizer.png",
+            forDark: pageSummarizerThumbnail,
         },
         urls: [
             {
@@ -131,7 +140,7 @@ const projects: Project[] = [
         description:
             "A padel tournament platform featuring the WPPR player rating system, with global tournament discovery, registration, scheduling, and more.",
         thumbnail: {
-            forDark: "/wecourts.png",
+            forDark: wecourtsThumbnail,
         },
         type: "professional",
         techsUsed: [siNodedotjs, siReact, siExpress, siPostgresql, siSupabase],
@@ -148,7 +157,7 @@ const projects: Project[] = [
         description:
             "A cloud-native SaaS platform for real-time environmental and operational data monitoring, built for offshore and industrial environments.",
         thumbnail: {
-            forDark: "/orbalux.png",
+            forDark: orbaluxThumbnail,
         },
         hasBlurredBackground: false,
         type: "professional",
@@ -166,7 +175,7 @@ const projects: Project[] = [
         description:
             "A medical and life science product development company covering the full product lifecycle, from research and design through engineering and commercialization.",
         thumbnail: {
-            forDark: "/midi.png",
+            forDark: midiThumbnail,
         },
         hasBlurredBackground: false,
         type: "professional",
@@ -184,7 +193,7 @@ const projects: Project[] = [
         description:
             "A women's health mobile app that helps book OB-GYN appointments and monitor periods and pregnancy, with medication reminders.",
         thumbnail: {
-            forDark: "/docayn.png",
+            forDark: docaynThumbnail,
         },
         hasBlurredBackground: false,
         type: "professional",
@@ -207,7 +216,7 @@ const projects: Project[] = [
         description:
             "An admin dashboard for managing a travel agency's internal users and branches, plus customers' Japan and Korea visa applications.",
         thumbnail: {
-            forDark: "/attictours.png",
+            forDark: attictoursThumbnail,
         },
         hasBlurredBackground: false,
         type: "professional",

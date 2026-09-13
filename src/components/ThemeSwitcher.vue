@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import moon from "/crescent-moon.svg";
-import sun from "/sun.svg";
+import moon from "@/assets/icons/crescent-moon.svg";
+import sun from "@/assets/icons/sun.svg";
 import { Theme, theme } from "../theme";
 
 const indicator = computed(() => {

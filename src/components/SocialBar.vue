@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import linkedinIcon from "/linkedin-color.svg";
-import githubIcon from "/github-color.svg";
-import emailIcon from "/email.svg";
-import moon from "/crescent-moon.svg";
-import sun from "/sun.svg";
+import linkedinIcon from "@/assets/icons/linkedin-color.svg";
+import githubIcon from "@/assets/icons/github-color.svg";
+import emailIcon from "@/assets/icons/email.svg";
+import moon from "@/assets/icons/crescent-moon.svg";
+import sun from "@/assets/icons/sun.svg";
 import { Theme, theme } from "../theme";
 
 const themeIcon = computed(() => (theme.state === Theme.DARK ? moon : sun));
 const themeLabel = computed(() =>
-    theme.state === Theme.DARK ? "Switch to light mode" : "Switch to dark mode"
+    theme.state === Theme.DARK ? "Switch to light mode" : "Switch to dark mode",
 );
 
 function toggleTheme() {
@@ -80,7 +80,9 @@ function toggleTheme() {
     align-items: center;
     justify-content: center;
     opacity: 0.7;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition:
+        opacity 0.2s ease-in-out,
+        transform 0.2s ease-in-out;
 }
 
 .bar-link:hover {
