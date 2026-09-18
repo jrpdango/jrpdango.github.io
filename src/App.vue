@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BackToTop from "./components/BackToTop.vue";
 import BaseHeader from "./components/BaseHeader.vue";
 import Projects from "./components/Projects.vue";
 import SocialBar from "./components/SocialBar.vue";
@@ -19,6 +20,7 @@ document.documentElement.setAttribute("data-theme", theme.state);
         <BaseHeader />
         <Projects />
     </div>
+    <BackToTop />
 </template>
 
 <style scoped>
