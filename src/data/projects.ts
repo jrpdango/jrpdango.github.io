@@ -38,7 +38,7 @@ import gittopTransparentThumbnail from "../assets/projects/gittop-full-transpare
 import humbleresumeThumbnail from "../assets/projects/humbleresume.webp";
 import jpCounterThumbnail from "../assets/projects/jp-counter.webp";
 import midiThumbnail from "../assets/projects/midi.webp";
-import miruThumbnail from "../assets/projects/miru.webp";
+import marumaroThumbnail from "../assets/projects/marumaro.webp";
 import orbaluxThumbnail from "../assets/projects/orbalux.webp";
 import pageSummarizerThumbnail from "../assets/projects/page-summarizer.webp";
 import wecourtsThumbnail from "../assets/projects/wecourts.webp";
@@ -87,15 +87,15 @@ const projects: Project[] = [
         techsUsed: [siVuedotjs, siTauri],
     },
     {
-        name: "miru",
+        name: "marumaro",
         description:
-            "A mobile MyAnimeList client demo I made to easily access a list of shows I've watched or plan to watch.",
+            "A mobile MyAnimeList client app for viewing and updating your favorite anime and manga lists.",
         thumbnail: {
-            forDark: miruThumbnail,
+            forDark: marumaroThumbnail,
         },
         urls: [
             {
-                href: "https://jrpdango.github.io/gittop/display?repo=miru&owner=jrpdango&token=wqNgw6lHVsOmRGHDmMO2E2osdH9RwrgPNwPDulAxVsOdfkpyY8K9bMKRwr4mwo0FL1rCoMO5w5pkY8OZGMOfw4QwMytMwqZTw5XDk8O5BhfDu1rDkX7DtS_CkMOew4UGwr1gcgTChmIdTcKGwqsOdSY8wrEaw5PCrkUJw7zCjmwEw7_Cj2fClMKDwqY2LDXDmFQrT37CiH1sw7YXf8OsacOobsOJZsKLG8K6",
+                href: "https://github.com/jrpdango/marumaro",
                 label: "View Source Code",
                 icon: Code,
             },
