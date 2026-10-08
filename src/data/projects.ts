@@ -28,6 +28,12 @@ import {
     siWordpress,
     siTauri,
     siNuxt,
+    siFastify,
+    siDotnet,
+    siDocker,
+    siRedis,
+    siJavascript,
+    siAseprite,
 } from "simple-icons";
 import { Code, Play, Internet } from "@iconoir/vue";
 import { Project } from "../types";
@@ -48,7 +54,7 @@ const projects: Project[] = [
     {
         name: "Gittop",
         description:
-            "An open-source tool for sharing private repository contents without having to make the repo itself public.",
+            "A tool for sharing private repository contents without having to make the repo itself public. When I first made this, I was so determined to not make my repos public because I was very shy and protective about my code. I've since gotten confident enough to be an open-source contributor so this isn't that big of a deal anymore, but I still find it useful for sharing code with people without having to give access to the entire repository.",
         thumbnail: {
             forLight: gittopThumbnail,
             forDark: gittopTransparentThumbnail,
@@ -67,12 +73,30 @@ const projects: Project[] = [
             },
         ],
         type: "personal",
-        techsUsed: [siReact, siNodedotjs],
+        techsUsed: [siReact, siNodedotjs, siJavascript],
     },
+    {
+        name: "marumaro",
+        description:
+            "A mobile MyAnimeList client app for viewing and updating your favorite anime and manga lists. This was an older project that I ended up revisiting much later on, and I'm proud of how it turned out. I do enjoy my anime and manga, and sometimes I find it a bit of a hassle to have to go to MyAnimeList to update my statuses every time. This makes it more convenient, plus I'd like to think that the me of the past would be pretty happy to see the app finally cleaned up after all these years.",
+        thumbnail: {
+            forDark: marumaroThumbnail,
+        },
+        urls: [
+            {
+                href: "https://github.com/jrpdango/marumaro",
+                label: "View Source Code",
+                icon: Code,
+            },
+        ],
+        type: "personal",
+        techsUsed: [siFlutter, siDart, siMyanimelist],
+    },
+
     {
         name: "HumbleResume",
         description:
-            "A simple Markdown-based resume builder with real-time previews and PDF export support.",
+            "A simple Markdown-based resume builder with real-time previews and PDF export support. I wanted to practice working with Tauri instead of something like Electron, so I thought it'd be fun to try and make something practical. Still needs some ironing out, but I do use it to keep my resume updated.",
         thumbnail: {
             forDark: humbleresumeThumbnail,
         },
@@ -86,23 +110,6 @@ const projects: Project[] = [
         ],
         type: "personal",
         techsUsed: [siVuedotjs, siTauri],
-    },
-    {
-        name: "marumaro",
-        description:
-            "A mobile MyAnimeList client app for viewing and updating your favorite anime and manga lists.",
-        thumbnail: {
-            forDark: marumaroThumbnail,
-        },
-        urls: [
-            {
-                href: "https://github.com/jrpdango/marumaro",
-                label: "View Source Code",
-                icon: Code,
-            },
-        ],
-        type: "personal",
-        techsUsed: [siFlutter, siDart, siMyanimelist],
     },
     {
         name: "Smol Jump",
@@ -119,7 +126,7 @@ const projects: Project[] = [
             },
         ],
         type: "personal",
-        techsUsed: [siFlutter, siDart],
+        techsUsed: [siFlutter, siDart, siAseprite],
     },
     {
         name: "JP Counter",
@@ -158,12 +165,20 @@ const projects: Project[] = [
     {
         name: "WeCourts",
         description:
-            "A padel tournament platform featuring the WPPR player rating system, with global tournament discovery, registration, scheduling, and more.",
+            "A padel tournament platform featuring the WPPR player rating system, with global tournament discovery, registration, scheduling, and more. My core responsibilities included improving and maintaining the user and admin frontend, managing the backend's public and private API endpoints, as well as handling CI & infrastructure.",
         thumbnail: {
             forDark: wecourtsThumbnail,
         },
         type: "professional",
-        techsUsed: [siNodedotjs, siReact, siExpress, siPostgresql, siSupabase],
+        techsUsed: [
+            siNodedotjs,
+            siReact,
+            siExpress,
+            siFastify,
+            siPostgresql,
+            siSupabase,
+            siRedis,
+        ],
         urls: [
             {
                 href: "https://wecourts.com/",
@@ -175,13 +190,13 @@ const projects: Project[] = [
     {
         name: "Orbalux",
         description:
-            "A cloud-native SaaS platform for real-time environmental and operational data monitoring, built for offshore and industrial environments.",
+            "A cloud-native SaaS platform for real-time environmental and operational data monitoring, built for offshore and industrial environments. I headed development of the landing page and have contributed to the main dashboard functionality.",
         thumbnail: {
             forDark: orbaluxThumbnail,
         },
         hasBlurredBackground: false,
         type: "professional",
-        techsUsed: [siVuedotjs, siTypescript, siNuxt],
+        techsUsed: [siVuedotjs, siTypescript, siNuxt, siDotnet, siDocker],
         urls: [
             {
                 href: "https://orbalux.com/",
@@ -193,7 +208,7 @@ const projects: Project[] = [
     {
         name: "MIDI",
         description:
-            "A medical and life science product development company covering the full product lifecycle, from research and design through engineering and commercialization.",
+            "A medical and life science product development company covering the full product lifecycle, from research and design through engineering and commercialization. This was my first professional Wordpress project, so there was a bit of a learning curve for the CMS at first. Eventually got the hang of things and built the homepage and the templates for all the others.",
         thumbnail: {
             forDark: midiThumbnail,
         },
@@ -211,7 +226,7 @@ const projects: Project[] = [
     {
         name: "Doc Ayn",
         description:
-            "A women's health mobile app that helps book OB-GYN appointments and monitor periods and pregnancy, with medication reminders.",
+            "A women's health mobile app that helps book OB-GYN appointments and monitor periods and pregnancy, with medication reminders. I took over this project from a previous iOS developer, and added feature parity with the Android version (and dare I say, improved it). This is where I most learned to work with Swift, building UI/UX, together with using Firebase as a backend for scheduling jobs, data storage, etc.",
         thumbnail: {
             forDark: docaynThumbnail,
         },
@@ -234,7 +249,7 @@ const projects: Project[] = [
     {
         name: "Attic Tours",
         description:
-            "An admin dashboard for managing a travel agency's internal users and branches, plus customers' Japan and Korea visa applications.",
+            "An admin dashboard for managing a travel agency's internal users and branches, plus customers' Japan and Korea visa applications. The site linked above is the public one, which I didn't build, but sadly I can't just link the admin dashboard here. That said, I helped out with the frontend, but mostly I took charge of the backend for this project, and managed most of the API endpoints.",
         thumbnail: {
             forDark: attictoursThumbnail,
         },
