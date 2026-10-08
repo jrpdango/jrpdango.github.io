@@ -42,6 +42,7 @@ import marumaroThumbnail from "../assets/projects/marumaro.webp";
 import orbaluxThumbnail from "../assets/projects/orbalux.webp";
 import pageSummarizerThumbnail from "../assets/projects/page-summarizer.webp";
 import wecourtsThumbnail from "../assets/projects/wecourts.webp";
+import smolJumpThumbnail from "../assets/projects/smol-jump.webp";
 
 const projects: Project[] = [
     {
@@ -102,6 +103,23 @@ const projects: Project[] = [
         ],
         type: "personal",
         techsUsed: [siFlutter, siDart, siMyanimelist],
+    },
+    {
+        name: "Smol Jump",
+        description:
+            "A tiny pixel art endless runner game I made for a friend's birthday. Has some cool effects like a day/night cycle and lighting adjustments. I had fun drawing custom sprites and made the sound effects myself. Maybe this is a sign to learn how to make music too?",
+        thumbnail: {
+            forDark: smolJumpThumbnail,
+        },
+        urls: [
+            {
+                href: "https://github.com/jrpdango/smol-jump",
+                label: "View Source Code",
+                icon: Code,
+            },
+        ],
+        type: "personal",
+        techsUsed: [siFlutter, siDart],
     },
     {
         name: "JP Counter",
